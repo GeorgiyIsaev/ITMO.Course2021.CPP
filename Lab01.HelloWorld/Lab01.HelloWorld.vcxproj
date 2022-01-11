@@ -24,6 +24,7 @@
     <ProjectGuid>{54f61021-c570-4b60-9032-8203d26e649a}</ProjectGuid>
     <RootNamespace>Lab01HelloWorld</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Lab01.MyFistProg</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
