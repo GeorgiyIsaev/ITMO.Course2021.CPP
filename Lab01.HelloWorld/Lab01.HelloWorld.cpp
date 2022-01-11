@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <windows.h>
 #include <string>
+#include <cmath>
 using namespace std;
 
 void InOutTest() {
@@ -26,9 +27,37 @@ void ConvertType() {
     cout.precision(3);
     cout<< "\nx = "<< x << endl;
     cout << sizeof(a / b) << ends << sizeof(x) << endl;
-
-
 }
+
+void CinOp() {
+    /*Исследование ввода операцией cin>> */
+    string name;
+    cout << "Введите свое имя";
+    double x;
+    double a, b;
+    cout << "\nВведите a и b:\n";
+    cin >> a;
+    cin >> name;
+    cin >> b;
+    x = a / b;
+    cout << "\nx = " << x << endl;
+    cout << "Привет, " << name << "!\n";
+}
+
+void AreaTriangle() {
+    /*Упражнение 3. Расчет площади треугольника*/
+    cout << "Введите периметр треугольника >> ";
+    double p; cin >> p;
+    cout << "Введите стороны треугольника a,b,c >> ";
+    double a, b, c; cin >> a >> b >> c;
+
+    double s;
+    s = sqrt(p * (p - a) * (p - b) * (p - c));
+
+    cout << "Площадь треугольника равна: "<< s;
+}
+
+
 
 int main()
 {
@@ -37,7 +66,7 @@ int main()
     SetConsoleCP(1251);
     
     //InOutTest();
-    ConvertType();
-
-
+    //ConvertType();
+    //CinOp();
+    AreaTriangle();
 }
