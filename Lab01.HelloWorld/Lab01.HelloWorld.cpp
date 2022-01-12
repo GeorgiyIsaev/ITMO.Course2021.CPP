@@ -49,10 +49,16 @@ void AreaTriangle() {
 
     cout << "Введите стороны треугольника a,b,c >> ";
     double a, b, c; cin >> a >> b >> c;
+
+    if (((a+b)<c) || ((a + c) < b) || ((c + b) < a)) {
+        //треугольнику не существуйте
+        AreaTriangle();
+        return;
+    }
+
     double p = (a + b + c) / 2; //полупериметр
     double s;
     s = sqrt(p * (p - a) * (p - b) * (p - c));
-
     cout << "Площадь треугольника равна: "<< s;
 }
 
