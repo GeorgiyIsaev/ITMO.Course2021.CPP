@@ -46,11 +46,10 @@ void CinOp() {
 
 void AreaTriangle() {
     /*Упражнение 3. Расчет площади треугольника*/
-    cout << "Введите периметр треугольника >> ";
-    double p; cin >> p;
+
     cout << "Введите стороны треугольника a,b,c >> ";
     double a, b, c; cin >> a >> b >> c;
-
+    double p = (a + b + c) / 2; //полупериметр
     double s;
     s = sqrt(p * (p - a) * (p - b) * (p - c));
 
