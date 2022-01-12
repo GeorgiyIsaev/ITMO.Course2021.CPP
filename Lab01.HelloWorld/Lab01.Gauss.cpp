@@ -1,14 +1,7 @@
-#pragma once
-#include <iostream>
-#include <windows.h>
-#include <string>
-#include <cmath>
+#include "Point.h"
+
 /*Задание 1. Расчет площади многоугольника*/
 
-struct Point{
-	int x;
-	int y;
-};
 
 int getSize() {
 	while (true) {
@@ -57,4 +50,8 @@ void AreaPolygon() {
 	//printPonts(size, ponts);
 
 	//delete[] ponts;
+}
+
+int main() {
+	AreaPolygon();
 }

@@ -1,0 +1,11 @@
+#pragma once
+#include <iostream>
+#include <windows.h>
+#include <string>
+#include <cmath>
+
+
+struct Point {
+	int x;
+	int y;
+};

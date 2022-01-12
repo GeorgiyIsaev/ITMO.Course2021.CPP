@@ -65,7 +65,7 @@ void AreaTriangle() {
 
 
 #include "Lab01.Gauss.cpp"
-int main()
+int main23122()
 {
    // system("chcp 1251");  //поддержки кириллицы (способ 1)
     SetConsoleOutputCP(1251); //поддержка кипиллицы (способ 2)
@@ -77,4 +77,5 @@ int main()
      //AreaTriangle();
 
     AreaPolygon();
+    return 0;
 }
