@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <string>
 #include <cmath>
+#include "Lav01.Gauss.h"
 
 struct Point {
 	int x;
@@ -25,12 +26,20 @@ int getSize() {
 	}
 }
 
+Point getPoint(int i) {
+	std::cout << "Введите x и y для точки " << i << " >> ";
+	int x, y;
+	std::cin >> x >> y;
+	return Point(x, y);
+}
+
+
 
 void AreaPolygon() {
 	/*Задание 1. Расчет площади многоугольника*/
 
 	int size = getSize();
-	Point[] ponts = getpoints();
+	Point ponts[] = getPoints();
 
 
 
