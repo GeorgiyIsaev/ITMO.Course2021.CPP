@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <string>
 #include <cmath>
+
 using namespace std;
 
 void InOutTest() {
@@ -63,7 +64,7 @@ void AreaTriangle() {
 }
 
 
-
+#include "Lab01.Gauss.cpp"
 int main()
 {
    // system("chcp 1251");  //поддержки кириллицы (способ 1)
@@ -73,5 +74,7 @@ int main()
     //InOutTest();
     //ConvertType();
     //CinOp();
-    AreaTriangle();
+     //AreaTriangle();
+
+    AreaPolygon();
 }

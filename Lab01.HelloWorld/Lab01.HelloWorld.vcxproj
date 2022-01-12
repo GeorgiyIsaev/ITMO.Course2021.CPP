@@ -141,10 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab01.HelloWorld.cpp" />
-    <ClCompile Include="Lav01.Gauss.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Lav01.Gauss.h" />
+    <ClCompile Include="Lab01.Gauss.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
