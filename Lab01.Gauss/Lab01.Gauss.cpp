@@ -48,6 +48,18 @@ void printPonts(const int size, Point* ponts) {
 	std::cout << std::endl;
 }
 
+int AreaMath(const int size, Point* ponts) {
+	int area = 0;
+	for (int i = 0; i < size-1; i++) {
+		area = area +
+			(ponts[i].x + ponts[i + 1].x) *
+			(ponts[i].y - ponts[i + 1].y);		
+	}
+	area = abs(area) / 2;
+	return area;
+}
+
+
 
 void AreaPolygon() {
 	/*Задание 1. Расчет площади многоугольника*/
@@ -55,7 +67,11 @@ void AreaPolygon() {
 	int size = getSize();
 	Point* ponts = getPoints(size);
 	printPonts(size, ponts);
+	double area = AreaMath(size, ponts);
 
+
+
+	std::cout<<"Площадь многоугольника: "<< area << std::endl;
 
 
 	delete[] ponts;
