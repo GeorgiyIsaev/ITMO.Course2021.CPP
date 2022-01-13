@@ -63,16 +63,11 @@ int AreaMath(const int size, Point* ponts) {
 
 void AreaPolygon() {
 	/*Задание 1. Расчет площади многоугольника*/
-
 	int size = getSize();
 	Point* ponts = getPoints(size);
 	printPonts(size, ponts);
 	double area = AreaMath(size, ponts);
-
-
-
 	std::cout<<"Площадь многоугольника: "<< area << std::endl;
-
 
 	delete[] ponts;
 }
