@@ -2,28 +2,35 @@
 #include "Lab.h"
 #include <windows.h>
 
-int main()
-{
-    std::cout << "Hello World!\n";
-    SetConsoleOutputCP(1251);
-    SetConsoleCP(1251);
-    /*Упражнение 1. Реализация операторов выбора*/
+void lab02() {
+ /*Упражнение 1. Реализация операторов выбора*/
     /*Задание 1. Определение принадлежности точки заданной фигуре*/
     ValidPoint(2, 2);
     ValidPoint(0, 0);
     ValidPoint(0, 3);
     ValidPoint(5, 3);
     /*Задание 2. Использование оператора switch при реализации выбора*/
-  //  SwitchUse();
-  //  SwitchUse02();
+    SwitchUse();
+    SwitchUse02();
     /*Упражнение 2. Использование циклов при реализации алгоритмов*/
     /*Задание 1. Использование цикла с постусловием*/
-  ////  DoWhileUse();
+    DoWhileUse();
     /*Задание 2. Использование цикла с предусловием*/
-  //  WhileUse();
+    WhileUse();
     /*Упражнение 3. Применение цикла с параметром (for) для итерации*/
-   // ForUse();
+    ForUse();
     /*Упражнение 4. Расчет суммы чисел на заданном интервале*/
     SumOnInterval();
 }
+}
+
+
+int main()
+{
+    std::cout << "Hello World!\n";
+    SetConsoleOutputCP(1251);
+    SetConsoleCP(1251);
+   
+    lab02();
+
 
