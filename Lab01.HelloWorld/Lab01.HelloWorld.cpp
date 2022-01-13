@@ -2,8 +2,9 @@
 #include <windows.h>
 #include <string>
 #include <cmath>
-
+#include "Lab01.Gauss.cpp"
 using namespace std;
+
 
 void InOutTest() {
     /*Упражнение 1. Ввод-вывод данных */
@@ -64,8 +65,7 @@ void AreaTriangle() {
 }
 
 
-#include "Lab01.Gauss.cpp"
-int main23122()
+int main()
 {
    // system("chcp 1251");  //поддержки кириллицы (способ 1)
     SetConsoleOutputCP(1251); //поддержка кипиллицы (способ 2)
