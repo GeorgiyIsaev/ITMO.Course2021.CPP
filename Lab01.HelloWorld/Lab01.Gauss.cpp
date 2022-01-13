@@ -60,7 +60,3 @@ void AreaPolygon() {
 
 	//delete[] ponts;
 }
-
-int main() {
-	AreaPolygon();
-}
