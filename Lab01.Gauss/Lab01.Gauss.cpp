@@ -2,13 +2,12 @@
 #include <windows.h>
 #include <string>
 #include <cmath>
+/*Задание 1. Расчет площади многоугольника*/
 
 struct Point {
 	int x;
 	int y;
 };
-
-/*Задание 1. Расчет площади многоугольника*/
 
 
 int getSize() {
@@ -56,6 +55,8 @@ void AreaPolygon() {
 	int size = getSize();
 	Point* ponts = getPoints(size);
 	printPonts(size, ponts);
+
+
 
 	delete[] ponts;
 }
