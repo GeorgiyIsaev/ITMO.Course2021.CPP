@@ -8,6 +8,9 @@ int main()
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
     /*Упражнение 1. Реализация операторов выбора*/
-    ValidPoint(2,2);
+    ValidPoint(2, 2);
+    ValidPoint(0, 0);
+    ValidPoint(0, 3);
+    ValidPoint(5, 3);
 }
 
