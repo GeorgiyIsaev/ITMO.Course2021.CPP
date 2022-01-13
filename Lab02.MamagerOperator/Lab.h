@@ -65,7 +65,7 @@ void SwitchUse02() {
 	}
 }
 
-void WhileUse() {
+void DoWhileUse() {
 	/*Упражнение 2. Использование циклов при реализации алгоритмов*/
     /*Задание 1. Использование цикла с постусловием*/
 	double x, x1, x2, y;
@@ -80,4 +80,22 @@ void WhileUse() {
 		std::cout << "\t" << x << "\t" << y << std::endl;
 		x = x + 0.01;
 	} while (x <= x2);
+}
+
+
+
+void WhileUse() {
+	/*Упражнение 2. Использование циклов при реализации алгоритмов*/
+	/*Задание 2. Использование цикла с предусловием*/
+	int a, b, temp;
+	std::cout << "a = "; std::cin >> a;
+	std::cout << "b = "; std::cin >> b;
+	while (a != b)
+	{
+		if (a > b)
+			a -= b; // аналогично выражению a = a - b
+		else
+			b -= a;
+	}
+	std::cout << "НОД = " << a << std::endl;
 }
