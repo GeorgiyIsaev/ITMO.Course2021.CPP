@@ -2,6 +2,7 @@
 #include "Lab.h"
 #include <windows.h>
 #include "Task01.LeapYaer.h"
+#include "Task02.MaxValue.h"
 
 void lab02() {
  /*Упражнение 1. Реализация операторов выбора*/
@@ -28,14 +29,17 @@ void lab02() {
 
 int main()
 {
-    std::cout << "Hello World!\n";
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
     /*Лабороторные работы*/
     //lab02();
     /*Задание 1. Определение високосного года*/
-    LeapYaer();
+   // LeapYaer();
+
+    /*Задание 2. Определение наибольшего из трех чисел*/
+    MaxValue();
+
 
 }
 

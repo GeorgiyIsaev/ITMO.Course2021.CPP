@@ -28,5 +28,8 @@
     <None Include="Task01.LeapYaer.h">
       <Filter>Файлы заголовков</Filter>
     </None>
+    <None Include="Task02.MaxValue.h">
+      <Filter>Файлы заголовков</Filter>
+    </None>
   </ItemGroup>
 </Project>

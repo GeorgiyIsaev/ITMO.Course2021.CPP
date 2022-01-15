@@ -45,6 +45,7 @@ std::string IsLeap(int yaer) {
 	{
 		text += "Не високосный год";
 	}
+	return text;
 }
 
 void LeapYaer() {
