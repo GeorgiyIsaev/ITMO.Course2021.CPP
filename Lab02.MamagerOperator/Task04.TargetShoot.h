@@ -23,6 +23,8 @@ class Shooter {
     std::string** arrShoot;
     int size;
     int x, y;
+    bool isShot = false;
+    bool isMimo = false;
 public:
     Shooter(int size) // конструктор класса
     {
@@ -48,8 +50,15 @@ public:
         } 
         randPoint(); //генерируем цель
     }
-    void print() {
-        system("cls");
+    void print() {   
+        if (isShot == true) {
+            std::cout << "Цель уничтожена!\n";
+        }
+        if (isMimo == true) {
+            std::cout << "Выстрел мимо стенда!\n";
+            isMimo = false;
+        }
+
         for (int j = 0; j < size; j++) {   
             for (int i = 0; i < size; i++) {
                 std::cout << arrShoot[j][i];
@@ -62,44 +71,45 @@ public:
         y = 1 + rand() % size; 
     }
 
-    bool Shot(Point point) {
-        if (point.x >= 1 && point.x < size            
-            && point.y >= 1 && point.y < size) {
-
+    int Shot(Point point) {
+        if (!(point.x >= 1 && point.x < size
+            && point.y >= 1 && point.y < size)) {
+            return -1;
+        }
         //Определим как далеко совершен выстрел от цели
         int distance = abs(x - point.x) + abs(y - point.y);
-        if (distance > 4) {
+        if (distance == 0) {
+            arrShoot[point.x][point.y] = "[V]";
+            isShot = true;
+        }
+        else if (distance > 4) {
             arrShoot[point.x][point.y] = "[X]";
+            isMimo = true;
         }
         else {
             arrShoot[point.x][point.y] = "[" + std::to_string(distance) + "]";
-        }      
-        return true;
-
-
-         
         }
-        return false;     
-    }
+        return distance;
+    }    
+ 
 };
 
 Point getShot() {
-    std::cout << "Введите выстрел : ";
+    std::cout << "Введите выстрел: ";
     Point point;
     std::cin >> point.x >> point.y;
     return point;
 }
 
 
-void printShooter(Shooter shooter) {
+
+int printShooter(Shooter shooter, int i) {
     system("cls");
-    std::cout << "\t\t МИШЕНЬ";
+    std::cout << "\t МИШЕНЬ \n"
+        << "Осталось потронов: " << i << std::endl;
     shooter.print();
-    bool isShot = shooter.Shot(getShot());
-    if (!isShot) {
-        std::cout << "Выстрел мимо мишени!"; 
-        system("pause");
-    }    
+    int distance = shooter.Shot(getShot());
+    return distance;
 }
 
 
@@ -109,19 +119,24 @@ void TargetSooter() {
 
     srand(time(0));
     int sizeShooter = 5;
+    int countBbullet = 9;
     Shooter shooter(sizeShooter);
 
-
-    for (int i = 0; i < 7; i++)
+    int bals = 0;
+    for (int i = countBbullet; i > 0; i--)
     {
-        printShooter(shooter);    
-      
-        
-      
-    }
-  
-   
- 
+       int distance = printShooter(shooter, i);
+       if (distance == 0) {
+           bals += 10;
+       }
+       else if (distance <2) {
+           bals += 5;
+       }
+       else if (distance < 4) {
+           bals+= 1;
+       }
 
-
+    }   
+    std::cout << "Потроны кончились!\n";
+    std::cout << "Всего заработано! " << bals << "баллов!\n" ;
 }
