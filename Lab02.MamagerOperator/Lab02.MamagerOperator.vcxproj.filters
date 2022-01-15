@@ -23,6 +23,9 @@
     <ClInclude Include="Lab.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Task03.Coin.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Task01.LeapYaer.h">
