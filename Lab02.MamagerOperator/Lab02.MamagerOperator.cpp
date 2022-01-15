@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "Task01.LeapYaer.h"
 #include "Task02.MaxValue.h"
+#include "Task03.Coin.h"
 
 void lab02() {
  /*Упражнение 1. Реализация операторов выбора*/
@@ -38,9 +39,9 @@ int main()
    // LeapYaer();
 
     /*Задание 2. Определение наибольшего из трех чисел*/
-    MaxValue();
+    //MaxValue();
 
-
+    Coin();
 }
 
 
