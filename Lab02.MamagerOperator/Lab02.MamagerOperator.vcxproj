@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Lab.h" />
     <ClInclude Include="Task03.Coin.h" />
+    <ClInclude Include="Task04.TargetShoot.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Task01.LeapYaer.h" />

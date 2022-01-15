@@ -4,6 +4,7 @@
 #include "Task01.LeapYaer.h"
 #include "Task02.MaxValue.h"
 #include "Task03.Coin.h"
+#include "Task04.TargetShoot.h"
 
 void lab02() {
  /*Упражнение 1. Реализация операторов выбора*/
@@ -41,7 +42,9 @@ int main()
     /*Задание 2. Определение наибольшего из трех чисел*/
     //MaxValue();
 
-    Coin();
+   // Coin();
+
+    TargetSooter();
 }
 
 
