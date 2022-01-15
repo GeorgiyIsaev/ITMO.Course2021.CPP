@@ -20,6 +20,7 @@ int MaxValue(int size, int *array) {
 }
 
 int* getValueArr(int size) {
+	std::cout << "¬ведите  " << size << " числа: ";
 	int* array = new int [size];
 	for (int i = 0; i < size; i++) {
 		std::cin >> array[i];
