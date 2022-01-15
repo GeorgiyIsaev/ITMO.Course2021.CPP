@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Lab.h"
 #include <windows.h>
+#include "Task01.LeapYaer.h"
 
 void lab02() {
  /*Упражнение 1. Реализация операторов выбора*/
@@ -31,7 +32,10 @@ int main()
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
-    lab02();
+    /*Лабороторные работы*/
+    //lab02();
+    /*Задание 1. Определение високосного года*/
+    LeapYaer();
 
 }
 

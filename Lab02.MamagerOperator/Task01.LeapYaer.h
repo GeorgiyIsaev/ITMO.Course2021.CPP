@@ -14,20 +14,41 @@
 */
 
 
-void LeapYaer() {
 
-	int year = 2000;
+
+int getYear() {
+	std::cout << "Введите год >> ";
+	std::string textYaer;
+	std::cin >> textYaer;
+	int year = 0;
+	try {
+		year = stoi(textYaer);
+	}
+	catch(int ex)
+	{
+		std::cout << "ERROR: Введеное значение не число! ";
+		getYear();
+	}
+	return year;
+}
+
+
+std::string IsLeap(int yaer) {
+	std::string text = std::to_string(year) + ": ";
 	//Если делится на 4 и не делится на 100
 	//Или если делится на 400, то условие выше не важно!
-	std::string text = "";
 	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
-	{	
-		text = "Високосный год";
+	{
+		text += "Високосный год";
 	}
 	else
 	{
-		text = "Не високосный год";
+		text += "Не високосный год";
 	}
+}
 
-
+void LeapYaer() {
+	int year = getYear();
+	std::string text = IsLeap(year);
+	std::cout << text << std::endl;
 }
