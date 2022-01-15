@@ -34,10 +34,10 @@ int getYear() {
 
 
 std::string IsLeap(int yaer) {
-	std::string text = std::to_string(year) + ": ";
+	std::string text = std::to_string(yaer) + ": ";
 	//Если делится на 4 и не делится на 100
 	//Или если делится на 400, то условие выше не важно!
-	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+	if ((yaer % 4 == 0 && yaer % 100 != 0) || yaer % 400 == 0)
 	{
 		text += "Високосный год";
 	}
@@ -48,7 +48,7 @@ std::string IsLeap(int yaer) {
 }
 
 void LeapYaer() {
-	int year = getYear();
-	std::string text = IsLeap(year);
+	int yaer = getYear();
+	std::string text = IsLeap(yaer);
 	std::cout << text << std::endl;
 }
