@@ -22,7 +22,7 @@ void lab02() {
     /*Упражнение 4. Расчет суммы чисел на заданном интервале*/
     SumOnInterval();
 }
-}
+
 
 
 int main()
@@ -30,7 +30,9 @@ int main()
     std::cout << "Hello World!\n";
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-   
+
     lab02();
+
+}
 
 
