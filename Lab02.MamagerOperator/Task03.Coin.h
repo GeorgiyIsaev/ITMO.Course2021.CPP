@@ -34,16 +34,21 @@ int* CalculationCountMonets(const int countTypeMonet, int* currentMoneta, int yo
 	return countMonets;
 }
 
+void printCountMonets(const int countTypeMonet, int* currentMoneta, int* countMonets, int yourCoin) {
+	std::cout << "Размен для " << yourCoin << ":\n";
+	for (int i = 0; i < countTypeMonet; i++) {
+		if (countMonets[i] != 0)
+			std::cout << "Монет номиналом " << currentMoneta[i] << ":\t " << countMonets[i] << std::endl;
+	}
+}
+
 void Coin() {
 	int yourCoin = getYourCoin();
 	const int countTypeMonet = 4;
 	int currentMoneta[countTypeMonet] = { 10,5,2,1 };
 	int *countMonets = CalculationCountMonets(countTypeMonet, currentMoneta, yourCoin);
 
+	printCountMonets(countTypeMonet, currentMoneta, countMonets, yourCoin);
 
-
-	std::cout << "Размен для " << yourCoin << ":\n";
-	for (int i = 0; i < countTypeMonet; i++) {
-		std::cout << "Монет номиналом " << currentMoneta[i] << ": " << countMonets[i] << std::endl;
-	}
+	
 }
