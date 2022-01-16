@@ -62,8 +62,8 @@ void mainLab03() {
 	privet(name, k);
 
 	/*Упражнение 3. Реализация сложных алгоритмов с помощью функций*/
-	double a = 0.2;
-	int n = 3;	
+	double a = 0.5;
+	int n = 30;	
 	int R = firBinSearch(a,n);
 	std::cout <<"R: "<< R << std::endl;
 }
