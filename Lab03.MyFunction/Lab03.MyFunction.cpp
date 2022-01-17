@@ -2,6 +2,7 @@
 #include "Lab03.h"
 #include "Lab03.SumValues.h"
 #include "Lab03.AlgEuclid.h"
+#include "Task01.AreaFigure.h"
 
 
 
@@ -21,7 +22,7 @@ int main()
 	//AlgEuclid();
 
 	/*Контрольные задания*/
-
+	AreaFigure();
 }
    
 

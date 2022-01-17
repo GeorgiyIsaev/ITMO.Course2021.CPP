@@ -63,8 +63,7 @@ struct Triangle {
 };
 
 Triangle* getTriangles(const int size, Point* points) {
-
-	if (size < 3) return;
+	
 	Triangle* triangles = new Triangle[size - 2];
 
 	for (int i = 0; i < size-2; i++) {
@@ -81,6 +80,8 @@ double AreaTriangle(Triangle triangle) {
 	double BC = lengthPoints(triangle.b, triangle.c);
 	double CA = lengthPoints(triangle.c, triangle.a);
 	double area = AreaTriangle(AB, BC, CA);
+
+	std::cout << "Площадь фигуры th = " << area << std::endl;
 	return area;
 }
 
@@ -88,13 +89,15 @@ double AreaFull(const int size, Triangle* triangle) {
 	double area = 0;
 	for (int i = 0; i < size - 2; i++) {
 		area += AreaTriangle(triangle[i]);
+
+		std::cout << "Площадь фигуры ful = " << area << std::endl;
 	}
 	return area;
 }
 void AreaFigure() {
 	int countPoints = 5;
 	Point* ponts = getPoints(countPoints);
-	Triangle* triangles = getTriangles();
+	Triangle* triangles = getTriangles(countPoints, ponts);
 	double area = AreaFull(countPoints, triangles);
 
 	std::cout << "Площадь фигуры = " << area << std::endl;
