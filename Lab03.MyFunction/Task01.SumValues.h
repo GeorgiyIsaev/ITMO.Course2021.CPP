@@ -1,7 +1,6 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <cmath>
+#include "MyInclude.h"
+
 /*Задание 1. Сумма чисел
 1. Создайте новый проект и объявите функцию, реализующую алгоритм
 вычисления суммы чисел от 1 до любого целого положительного числа n:
@@ -31,21 +30,6 @@ int addNumders(int start, int end)
 }
 
 
-int getValue() {
-	std::cout << "Введите число >> ";
-	std::string textValue;
-	std::cin >> textValue;
-	int value = 0;
-	try {
-		value = stoi(textValue);
-	}
-	catch (int ex)
-	{
-		std::cout << "ERROR: Введеное значение не число! ";
-		getValue();
-	}
-	return value;
-}
 
 void SumValue() {
 	

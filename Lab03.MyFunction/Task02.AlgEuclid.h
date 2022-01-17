@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <cmath>
+#include "MyInclude.h"
 
 /*Задание 2. Алгоритм Евклида
 1. В этом же проекте объявите функцию, реализующую
@@ -22,21 +20,7 @@ int gcd(int m, int n)
 	return gcd(n, m % n);
 }
 
-int getValue(std::string text = "Введите число >> " ) {
-	std::cout << text;
-	std::string textValue;
-	std::cin >> textValue;
-	int value = 0;
-	try {
-		value = stoi(textValue);
-	}
-	catch (int ex)
-	{
-		std::cout << "ERROR: Введеное значение не число! ";
-		getValue(text);
-	}
-	return value;
-}
+
 
 void AlgEuclid() {
 	int  m = getValue("Введите число m: ");

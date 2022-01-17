@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab03.h" />
+    <ClInclude Include="MyInclude.h" />
     <ClInclude Include="Task01.SumValues.h" />
     <ClInclude Include="Task02.AlgEuclid.h" />
   </ItemGroup>
