@@ -1,7 +1,7 @@
 ﻿#include <windows.h>
 #include "Lab03.h"
-#include "Task01.SumValues.h"
-#include "Task02.AlgEuclid.h"
+#include "Lab03.SumValues.h"
+#include "Lab03.AlgEuclid.h"
 
 
 
@@ -16,9 +16,9 @@ int main()
 
 	/*Рекурсии*/
 	/*Задание 1. Сумма чисел*/
-	SumValue();
+	//SumValue();
 	/*Задание 2. Алгоритм Евклида*/
-	AlgEuclid();
+	//AlgEuclid();
 
 	/*Контрольные задания*/
 

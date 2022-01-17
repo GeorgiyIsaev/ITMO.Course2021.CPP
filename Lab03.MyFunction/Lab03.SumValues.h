@@ -43,3 +43,7 @@ void SumValue() {
 	std::cout << "Сумма для чисел от " << value << " до " <<
 		value + value << ": " << sum << std::endl;
 }
+
+
+
+
