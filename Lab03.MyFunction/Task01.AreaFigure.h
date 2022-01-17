@@ -1,5 +1,7 @@
 #pragma once
 #include "MyInclude.h"
+#include "Task01.Point.h"
+
 
 /*Задание 1. Расчет площади сложной фигуры
 Требуется написать программу для вычисления площади выпуклого 
@@ -14,31 +16,17 @@
 где xb, yb и xc, yc координаты двух точек отрезка.
 */
 
-struct Point {
-	int x;
-	int y;
-};
-
-Point getPoint(int i) {
-	std::cout << "Введите x и y для точки " << i << " >> ";
-	Point point;
-	std::cin >> point.x >> point.y;
-	return point;
-}
 
 Point* getPoints(const int size) {
 	Point* ponts = new Point[size];
 
 	for (int i = 0; i < size; i++) {
-		ponts[i] = getPoint(i);
+		ponts[i].cinPoint(i + 1);
 	}
 	return ponts;
 }
 
-int lengthPoints(Point p1, Point p2) {
-	//Длина между точками
-	return sqrt(pow((p1.x - p2.x),2) + pow((p1.x - p2.x), 2));
-}
+
 
 bool isTriangle(double a, double b, double c) {
 	if (((a + b) < c) || ((a + c) < b) || ((c + b) < a)) {
