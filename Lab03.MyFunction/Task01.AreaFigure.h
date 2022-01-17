@@ -32,9 +32,7 @@ Triangle* getTriangles(const int size, Point* points) {
 	Triangle* triangles = new Triangle[size - 2];
 
 	for (int i = 0; i < size - 2; i++) {
-		triangles[i].a = points[i];
-		triangles[i].b = points[i + 1];
-		triangles[i].b = points[i + 2];
+		triangles[i].SetTriangle(points[i], points[i + 1], points[i + 2]);		
 	}
 	return triangles;
 }
@@ -44,16 +42,24 @@ Triangle* getTriangles(const int size, Point* points) {
 double AreaFull(const int size, Triangle* triangle) {
 	double area = 0;
 	for (int i = 0; i < size - 2; i++) {
-		area += AreaTriangle(triangle[i]);
+		area += triangle[i].AreaTriangle();
 
-		std::cout << "Площадь фигуры ful = " << area << std::endl;
+		//std::cout << "Площадь фигуры ful = " << area << std::endl;
 	}
 	return area;
 }
 void AreaFigure() {
 	int countPoints = 5;
+	//Получаем точки
 	Point* ponts = getPoints(countPoints);
+	//Собираем из точек триугольники
 	Triangle* triangles = getTriangles(countPoints, ponts);
+	//Проверяем триугольник
+	for (int i = 0; i < countPoints - 2; i++)
+		triangles[i].PrintInfo();
+
+		
+
 	double area = AreaFull(countPoints, triangles);
 
 	std::cout << "Площадь фигуры = " << area << std::endl;
