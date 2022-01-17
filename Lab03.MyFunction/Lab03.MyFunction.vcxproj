@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Lab03.h" />
     <ClInclude Include="Task01.SumValues.h" />
+    <ClInclude Include="Task02.AlgEuclid.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
