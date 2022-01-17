@@ -1,7 +1,7 @@
 #pragma once
 #include "MyInclude.h"
 #include "Task01.Point.h"
-
+#include "Task01.Triangle.h"
 
 /*Задание 1. Расчет площади сложной фигуры
 Требуется написать программу для вычисления площади выпуклого 
@@ -27,51 +27,19 @@ Point* getPoints(const int size) {
 }
 
 
-
-bool isTriangle(double a, double b, double c) {
-	if (((a + b) < c) || ((a + c) < b) || ((c + b) < a)) {
-		//треугольнику не существуйте	
-		return false;
-	}
-	return true;
-}
-
-double AreaTriangle(double a, double b, double c) {
-	/*Расчет площади треугольника*/
-	double p = (a + b + c) / 2; //полупериметр
-	double area;
-	area = sqrt(p * (p - a) * (p - b) * (p - c));
-	return area;
-}
-
-struct Triangle {
-	Point a;
-	Point b;
-	Point c;
-};
-
 Triangle* getTriangles(const int size, Point* points) {
-	
+
 	Triangle* triangles = new Triangle[size - 2];
 
-	for (int i = 0; i < size-2; i++) {
+	for (int i = 0; i < size - 2; i++) {
 		triangles[i].a = points[i];
-		triangles[i].b = points[i+1];
+		triangles[i].b = points[i + 1];
 		triangles[i].b = points[i + 2];
 	}
 	return triangles;
 }
 
-double AreaTriangle(Triangle triangle) {
-	/*Расчет площади треугольника*/
-	double AB = lengthPoints(triangle.a, triangle.b);
-	double BC = lengthPoints(triangle.b, triangle.c);
-	double CA = lengthPoints(triangle.c, triangle.a);
-	double area = AreaTriangle(AB, BC, CA);
-
-	std::cout << "Площадь фигуры th = " << area << std::endl;
-	return area;
-}
+		
 
 double AreaFull(const int size, Triangle* triangle) {
 	double area = 0;
