@@ -149,6 +149,7 @@
     <ClInclude Include="Task01.AreaFigure.h" />
     <ClInclude Include="Task01.Point.h" />
     <ClInclude Include="Task01.Triangle.h" />
+    <ClInclude Include="Task02.CubeSqrt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

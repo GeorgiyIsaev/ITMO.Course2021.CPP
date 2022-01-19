@@ -3,6 +3,7 @@
 #include "Lab03.SumValues.h"
 #include "Lab03.AlgEuclid.h"
 #include "Task01.AreaFigure.h"
+#include "Task02.CubeSqrt.h"
 
 
 
@@ -22,7 +23,10 @@ int main()
 	//AlgEuclid();
 
 	/*Контрольные задания*/
-	AreaFigure();
+	/*Задание 1. Расчет площади сложной фигуры*/
+	//AreaFigure();
+	/*Задание 2. Применение итерации реализации функции*/
+	CubeSqrt();
 }
    
 
