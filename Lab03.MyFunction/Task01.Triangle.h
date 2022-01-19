@@ -15,16 +15,8 @@ public:
 	}
 	double AreaTriangle() {	
 		/*Расчет площади треугольника*/
-		double p = (ab + bc + ca) / 2; //полупериметр
-		std::cout << "\nПиритра: " << p;
-		std::cout << " 01: " << (p - ab) << std::endl;
-		std::cout << " 02: " << p * (p - ab)  << std::endl;
-		std::cout << " 03: " << p * (p - ab) * (p - bc) << std::endl;
-		std::cout << " 04: " <<  (p - ca) << std::endl;
-		std::cout << " 05: " << p * (p - ab) * (p - bc) * (p - ca) << std::endl;
-		std::cout << " 06: " << sqrt(p * (p - ab) * (p - bc) * (p - ca)) << std::endl;
-		double area = sqrt(p * (p - ab) * (p - bc) * (p - ca));
-		std::cout << " пл: " << area << std::endl;
+		double p = (ab + bc + ca) / 2; //полупериметр		
+		double area = sqrt(p * (p - ab) * (p - bc) * (p - ca));	
 		return area;
 	}
 	void PrintInfo() {

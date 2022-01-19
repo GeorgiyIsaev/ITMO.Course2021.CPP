@@ -12,7 +12,7 @@ struct Point {
 	}
 	double lengthPoints(Point p) {
 		//Длина между это и другой точками
-		return sqrt(pow((x - p.x), 2) + pow((x - p.x), 2));
+		return sqrt(pow((x - p.x), 2) + pow((y - p.y), 2));
 	}
 	std::string PrintInfo() {
 		std::string str= "{" + std::to_string(x) + ": " +

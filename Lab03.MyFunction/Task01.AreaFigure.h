@@ -18,6 +18,7 @@
 
 
 Point* getPoints(const int size) {
+	//Возвращает массив с точками
 	Point* ponts = new Point[size];
 
 	for (int i = 0; i < size; i++) {
@@ -28,7 +29,7 @@ Point* getPoints(const int size) {
 
 
 Triangle* getTriangles(const int size, Point* points) {
-
+	//Собирает из точек треугльники
 	Triangle* triangles = new Triangle[size - 2];
 
 	for (int i = 0; i < size - 2; i++) {
@@ -40,14 +41,20 @@ Triangle* getTriangles(const int size, Point* points) {
 		
 
 double AreaFull(const int size, Triangle* triangle) {
+	//Подсчитвает сумму всех площадей всех трекгольников
 	double area = 0;
 	for (int i = 0; i < size - 2; i++) {
 		area += triangle[i].AreaTriangle();
-
-		//std::cout << "Площадь фигуры ful = " << area << std::endl;
 	}
 	return area;
 }
+
+void printFigure(int countPoints, Triangle* triangles) {
+	//Показвает информацию о треугольниках
+	for (int i = 0; i < countPoints - 2; i++)
+		triangles[i].PrintInfo();
+}
+
 void AreaFigure() {
 	int countPoints = 5;
 	//Получаем точки
@@ -55,13 +62,11 @@ void AreaFigure() {
 	//Собираем из точек триугольники
 	Triangle* triangles = getTriangles(countPoints, ponts);
 	//Проверяем триугольник
-	for (int i = 0; i < countPoints - 2; i++)
-		triangles[i].PrintInfo();
+	printFigure(countPoints, triangles);
 
 		
-
+	//Подсчитываем площадь фигуры
 	double area = AreaFull(countPoints, triangles);
-
 	std::cout << "Площадь фигуры = " << area << std::endl;
 	
 
