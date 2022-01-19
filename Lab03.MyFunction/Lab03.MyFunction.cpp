@@ -5,6 +5,7 @@
 #include "Task01.AreaFigure.h"
 #include "Task02.CubeSqrt.h"
 #include "Task03.Triangle.h"
+#include "Task04.RecFunc.h"
 
 
 
@@ -28,7 +29,10 @@ int main()
 	/*Задание 2. Применение итерации реализации функции*/
 	//CubeSqrt();
 	/*Задание 3. Работа с различными треугольниками*/
-	TriangleMenu();
+	//TriangleMenu();
+	/*Задание 4. Рекурсивная функция суммы ряда*/
+	TestRecFunction();
 }
+
    
 
