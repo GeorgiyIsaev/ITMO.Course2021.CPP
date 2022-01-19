@@ -25,15 +25,15 @@ double calculateTriangleArea(double side, double side2, double side3) {
 
 double EquilateralTriangleMenu() {
     //дл€ равносторнего треугольника
-    double side = 5;
+    double side = getValue("¬ведите значение стороны треугольника: ");
     double area = calculateTriangleArea(side);
     return area;
 }
 double VersatileTriangleMenu() {
     //дл€ разносторонеего треугольника
-    double side1 = 5;
-    double side2 = 6;
-    double side3 = 4;
+    double side1 = getValue("¬ведите сторону 1: ");
+    double side2 = getValue("¬ведите сторону 2: ");
+    double side3 = getValue("¬ведите сторону 3: ");
     double area = calculateTriangleArea(side1, side2, side3);
     return area;
 }
