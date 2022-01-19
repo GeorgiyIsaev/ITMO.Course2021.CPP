@@ -10,27 +10,38 @@
 
 
 
-double WhileCubeSqrt(double sq) {
-    double x = 0, // начальное значение x
-        x1 = sq; // значение x-1
+double WhileCubeSqrt(double value) {
+    double x1 = value, // начальное значение x
+        x = 0; // значение x-1
 
     while (true)
     {
-        x = (1 / 3) * ((sq / (x1 * x1)) + (2 * x1));
-        if (abs(x1 - x) < pow(10.0, -5.0)) //
+        x = (1.0 / 3) * ((value / (x1 * x1)) + (2 * x1));
+       // std::cout << x << " " << x1 << std::endl;
+        if (abs(x1 - x) < pow(10.0, -5.0))
         {
-            // cout << pow(10.0, -5.0);
             break;
         }
+        x1 = x;
     }
     return x;
 }
 
 
-void CubeSqrt() {
-    double x = 5; //getValue("¬ведите значение под корнем"); 
-    double sq = WhileCubeSqrt(x);
-    double sq2 = pow(x, 1.0 / 3);
+void CubeSqrt() {  
+    std::cout << pow(10.0, -5.0) << std::endl;
+    double x = 8; //getValue("¬ведите значение под корнем");    
+    double sq_standart = pow(x, 1.0 / 3); //стандартный вызов
+    double sq = WhileCubeSqrt(x); //итерационное выческление
+    std::cout << "8 sq= " << sq << "sq_st= " << sq_standart << std::endl;
 
-    std::cout << sq << " " << sq2 << std::endl;
+    x = 27; //getValue("¬ведите значение под корнем");    
+    sq_standart = pow(x, 1.0 / 3); //стандартный вызов
+    sq = WhileCubeSqrt(x); //итерационное выческление
+    std::cout << "27 sq= " << sq << "sq_st= " << sq_standart << std::endl;
+
+    x = 255; //getValue("¬ведите значение под корнем");    
+    sq_standart = pow(x, 1.0 / 3); //стандартный вызов
+    sq = WhileCubeSqrt(x); //итерационное выческление
+    std::cout << "255 sq= " << sq << "sq_st= " << sq_standart << std::endl;
 }
