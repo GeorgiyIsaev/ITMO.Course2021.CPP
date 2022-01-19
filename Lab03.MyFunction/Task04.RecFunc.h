@@ -18,4 +18,14 @@ int SumSeries(int start, int end, int mult, int step) {
 
 void TestRecFunction() {
 
+    int start = GetValue("¬ведите начало р€да: ");
+    int end = GetValue("¬ведите конец р€да: ");
+    int mult = GetValue("¬ведите числа дл€ умножени€ рада: ");
+    int step = GetValue("”казжиет шаг р€да: ");
+
+    int result = SumSeries(start, end, mult, step);
+    std::cout <<"–езультат: " << result << "\n";
+
+
+
 }
