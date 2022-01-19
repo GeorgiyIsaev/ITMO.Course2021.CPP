@@ -12,12 +12,12 @@
 ¬ыбор типа треугольника реализуйте с помощью диалога с пользователем.*/
 
 
-double calculateTriangleArea(double side) { 
+double CalculateTriangleArea(double side) { 
     double halfPerim = (side * 3) / 2;
     return sqrt((halfPerim * (halfPerim - side) * (halfPerim - side) * (halfPerim - side)));
 }
 
-double calculateTriangleArea(double side, double side2, double side3) { 
+double CalculateTriangleArea(double side, double side2, double side3) { 
     double halfPerim = (side + side2 + side3) / 2;
     return sqrt((halfPerim * (halfPerim - side) * (halfPerim - side2) * (halfPerim - side3)));
 }
@@ -25,16 +25,16 @@ double calculateTriangleArea(double side, double side2, double side3) {
 
 double EquilateralTriangleMenu() {
     //дл€ равносторнего треугольника
-    double side = getValue("¬ведите значение стороны треугольника: ");
-    double area = calculateTriangleArea(side);
+    double side = GetValue("¬ведите значение стороны треугольника: ");
+    double area = CalculateTriangleArea(side);
     return area;
 }
 double VersatileTriangleMenu() {
     //дл€ разносторонеего треугольника
-    double side1 = getValue("¬ведите сторону 1: ");
-    double side2 = getValue("¬ведите сторону 2: ");
-    double side3 = getValue("¬ведите сторону 3: ");
-    double area = calculateTriangleArea(side1, side2, side3);
+    double side1 = GetValue("¬ведите сторону 1: ");
+    double side2 = GetValue("¬ведите сторону 2: ");
+    double side3 = GetValue("¬ведите сторону 3: ");
+    double area = CalculateTriangleArea(side1, side2, side3);
     return area;
 }
 

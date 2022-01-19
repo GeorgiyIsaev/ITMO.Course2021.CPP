@@ -33,7 +33,7 @@ int addNumders(int start, int end)
 
 void SumValue() {
 	
-	int value = getValue();
+	int value = GetValue();
 	int sum = addNumders(value);
 	std::cout << "Сумма для " << value <<
 		":  " << sum << std::endl;

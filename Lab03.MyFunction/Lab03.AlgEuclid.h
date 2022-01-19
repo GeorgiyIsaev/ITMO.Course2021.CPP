@@ -23,8 +23,8 @@ int gcd(int m, int n)
 
 
 void AlgEuclid() {
-	int  m = getValue("¬ведите число m: ");
-	int  n = getValue("¬ведите число n: ");
+	int  m = GetValue("¬ведите число m: ");
+	int  n = GetValue("¬ведите число n: ");
 	int result = gcd(m, n);
 	std::cout << "–езультат: " << result;
 }

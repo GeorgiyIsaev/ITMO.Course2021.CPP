@@ -3,7 +3,7 @@
 #include <string>
 #include <cmath>
 
-int getValue(std::string text = "¬ведите число: ") {
+int GetValue(std::string text = "¬ведите число: ") {
 	std::cout << text;
 	std::string textValue;
 	std::cin >> textValue;
@@ -14,7 +14,7 @@ int getValue(std::string text = "¬ведите число: ") {
 	catch (int ex)
 	{
 		std::cout << "ERROR: ¬веденое значение не число! ";
-		getValue(text);
+		GetValue(text);
 	}
 	return value;
 }
