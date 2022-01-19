@@ -6,6 +6,7 @@
 #include "Task02.CubeSqrt.h"
 #include "Task03.Triangle.h"
 #include "Task04.RecFunc.h"
+#include "Task05.BinaryCode.h"
 
 
 
@@ -32,6 +33,8 @@ int main()
 	//TriangleMenu();
 	/*Задание 4. Рекурсивная функция суммы ряда*/
 	TestRecFunction();
+	/*Задание 5. Применение рекурсии для перевода целого числа в двоичный код*/
+	TestBinaryCode();
 }
 
    

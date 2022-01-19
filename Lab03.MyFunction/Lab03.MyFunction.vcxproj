@@ -152,6 +152,7 @@
     <ClInclude Include="Task02.CubeSqrt.h" />
     <ClInclude Include="Task03.Triangle.h" />
     <ClInclude Include="Task04.RecFunc.h" />
+    <ClInclude Include="Task05.BinaryCode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
