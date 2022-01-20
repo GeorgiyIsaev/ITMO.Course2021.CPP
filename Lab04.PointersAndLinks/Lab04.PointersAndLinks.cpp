@@ -1,6 +1,7 @@
 ﻿#include <windows.h>
 #include "Lab04.h"
 #include "Task01.SqrtTwo.h"
+#include "Task02.Input.h"
 
 int main()
 {
@@ -13,8 +14,8 @@ int main()
 
 	/*Контрольные задания*/
 	/*Задание 1. Вычисление корней квадратного уравнения*/
-	MainSquareRoot();
+	//MainSquareRoot();
 	/*Задание 2. Реализация ввода данных*/
-
+	MainInput();
 
 }

@@ -20,17 +20,38 @@
 установите на ваше усмотрение).
 */
 
+bool Input(int& a, int& b)
+{
+	std::cout << "Введите два числа: ";
+	std::string tempA, tempB;
+	std::cin >> tempA >> tempB;
+	int value = 0;
+	try {
+		a = stoi(tempA);
+		b = stoi(tempB);
+		return true;
+	}
+	catch (int ex)
+	{
+		std::cout << "ERROR: Введеное значение не число! ";
+	}
+	return false;
+}
 
 
-int MainInput()
+
+void MainInput()
 {
 	int a, b;
-	if (Input(a, b) == false) // if(!Input(a,b))
+	if (Input(a, b) == false)
 	{
-		cerr << "error";
-		return 1;
+		std::cout << "Введенные данные не корректны!" << std::endl;	
 	}
-	int s = a + b;
-	return 0;
+	else {	
+		int s = a + b;
+		std::cout << "Данные успешно получены" << std::endl;
+		std::cout << "Значение а = " << a << ", b = " << b << ";" <<std::endl;
+		std::cout << "Сумма = " << s << std::endl;
+	}
 }
 
