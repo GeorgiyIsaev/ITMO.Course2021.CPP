@@ -2,6 +2,7 @@
 #include "MyInclude.h"
 
 
+
 void Task01() {
 	/*Упражнение 1. Обработка данных массива*/
 	const int n = 10;
@@ -99,6 +100,22 @@ void Task03p() {
 	show_array(A, N);
 }
 
+void Task04() {
+	/*Упражнение 4. Реализация динамического массива*/
+	int size = GetValue("Ведите размер массива >> ");
+	int* myArray = new int[size];
+	for (int i = 0; i < size; i++)
+	{
+		myArray[i] = (rand() % 10) + 1;
+	}
+	show_array(myArray, size);
+}
+
+
+
+
+
+
 void MainLab05() {
 	/*Практическое занятие 5. Работа с массивами*/
 	/*Упражнение 1. Обработка данных массива*/
@@ -107,5 +124,11 @@ void MainLab05() {
 	Task02();
 	/*Упражнение 3. Использование указателя на функцию*/
 	Task03();
-	Task03p()
+	Task03p();
+
+	/*Упражнение 4. Реализация динамического массива*/
+	srand(time(NULL));
+	Task04();
+
+
 }

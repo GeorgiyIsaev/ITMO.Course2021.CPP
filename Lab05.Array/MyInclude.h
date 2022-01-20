@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <time.h>
 
 int GetValue(std::string text = "¬ведите число: ") {
 	std::cout << text;
