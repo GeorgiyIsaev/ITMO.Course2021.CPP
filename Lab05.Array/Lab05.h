@@ -71,10 +71,10 @@ void bubble_sort(int Arr[], const int N, bool (*compare)(int a, int b))
 }
 
 void Task03() {
-	
-	const int N = 10;	int my_choose = 0;
-
-		int A[N] = { 9,8,7,6,1,2,3,5,4,9 };
+	/*Упражнение 3. Использование указателя на функцию*/
+	const int N = 10;
+	int my_choose = 0;
+	int A[N] = { 9,8,7,6,1,2,3,5,4,9 };
 	std::cout << "1. Сортировать по возрастанию\n";
 	std::cout << "2. Сортировать по убыванию\n";
 	std::cin >> my_choose;
@@ -87,6 +87,18 @@ void Task03() {
 	}
 	show_array(A, N);
 }
+
+void Task03p() {
+	/*Использование массива указателей на функции*/
+	bool (*from_f[2])(int, int) = { from_min,from_max };
+	const int N = 10;
+	int my_choose = 0;
+	int A[N] = { 9,8,7,6,1,2,3,5,4,9 };
+	show_array(A, N);
+	bubble_sort(A, N, (*from_f[my_choose - 1]));
+	show_array(A, N);
+}
+
 void MainLab05() {
 	/*Практическое занятие 5. Работа с массивами*/
 	/*Упражнение 1. Обработка данных массива*/
@@ -95,4 +107,5 @@ void MainLab05() {
 	Task02();
 	/*Упражнение 3. Использование указателя на функцию*/
 	Task03();
+	Task03p()
 }
