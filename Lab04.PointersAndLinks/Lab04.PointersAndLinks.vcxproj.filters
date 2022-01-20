@@ -29,5 +29,8 @@
     <ClInclude Include="Task01.SqrtTwo.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Task02.Input.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
