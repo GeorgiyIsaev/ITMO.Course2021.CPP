@@ -63,7 +63,7 @@ void bubble_sort(int Arr[], const int N, bool (*compare)(int a, int b))
 {
 	for (int i = 1; i < N; i++)
 	{
-		for (int j = 0; j < N - 1; j++)			
+		for (int j = 0; j < (N - 1); j++)			
 		{
 			if ((*compare)(Arr[j], Arr[j + 1]))
 				std::swap(Arr[j], Arr[j + 1]);
@@ -111,11 +111,6 @@ void Task04() {
 	show_array(myArray, size);
 }
 
-
-
-
-
-
 void MainLab05() {
 	/*Практическое занятие 5. Работа с массивами*/
 	/*Упражнение 1. Обработка данных массива*/
@@ -129,6 +124,5 @@ void MainLab05() {
 	/*Упражнение 4. Реализация динамического массива*/
 	srand(time(NULL));
 	Task04();
-
-
+	
 }
