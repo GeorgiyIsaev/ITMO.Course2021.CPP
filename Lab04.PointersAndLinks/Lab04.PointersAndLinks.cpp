@@ -1,4 +1,5 @@
 ﻿#include <windows.h>
+#include "Lab04.h"
 
 int main()
 {
@@ -6,5 +7,8 @@ int main()
 	SetConsoleCP(1251);
 
 	/*Практическое занятие 4. Использование указателей и ссылок*/
+	Lab04Main();
+
+
 
 }
