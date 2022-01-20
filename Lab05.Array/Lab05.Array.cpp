@@ -1,4 +1,5 @@
 ﻿#include <windows.h>
+#include "Lab05.h"
 
 int main()
 {
@@ -6,7 +7,7 @@ int main()
 	SetConsoleCP(1251);
 
 	/*Практическое занятие 5. Работа с массивами*/
-
+	MainLab05();
 
 
 
