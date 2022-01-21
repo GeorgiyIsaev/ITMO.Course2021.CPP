@@ -17,25 +17,24 @@ int* GetRandomArray(const int size)
 	}
 	return arr;
 }
-void SortArray(const int size, int* arr)
-{
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size - 1; j++) {
-			if (arr[j] > arr[j + 1]) {
-				int b = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = b;
-			}
-		}
-	}
-}
 void PrintArray(const int size, int* arr) {
 	//Показвает информацию о треугольниках
 	for (int i = 0; i < size - 2; i++)
 		std::cout << arr[i] << " ";
 	std::cout << "\n";
 }
-
+void SortArray(const int size, int* arr)
+{
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size - 1; j++) {
+			if (arr[j] > arr[j + 1]) {				
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;				
+			}
+		}	
+	}
+}
 
 /*Функции для работы с файлом*/
 bool WriteArrayToFile(const int size, int* arr, std::string nameFile = "ArrFile.txt") {
@@ -49,7 +48,7 @@ bool WriteArrayToFile(const int size, int* arr, std::string nameFile = "ArrFile.
 	if (out.is_open())
 	{
 		for (int i = 0; i < size; i++) {
-			out << arr<< std::endl;
+			out << arr[i]<< std::endl;
 		}		
 	}
 	out.close();
