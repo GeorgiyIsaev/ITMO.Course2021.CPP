@@ -14,7 +14,8 @@ void MainLab06() {
 	/*Создаим объект <fstream>*/
 	std::ofstream out("test", std::ios::out | std::ios::binary);
 	if (!out) {
-		std::cout << "Файл открыть невозможно\n";		
+		std::cout << "Файл открыть невозможно\n";
+		return;
 	}
 	/*Сохраним поток в буфер*/
 	out.write((char*)nums, sizeof(nums));
@@ -25,7 +26,8 @@ void MainLab06() {
 	/*Откроем файл*/
 	std::ifstream in("test", std::ios::in | std::ios::binary);
 	if (!in) {
-		std::cout << "Файл открыть невозможно";		
+		std::cout << "Файл открыть невозможно";	
+		return;
 	}
 	/*Прочтем данные из файла*/
 	in.read((char*)&nums, sizeof(nums));
