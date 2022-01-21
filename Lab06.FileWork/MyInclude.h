@@ -4,6 +4,7 @@
 #include <cmath>
 #include <time.h>
 #include <fstream> //‘айловые потоки
+#include <windows.h>
 
 int GetValue(std::string text = "¬ведите число: ") {
 	std::cout << text;

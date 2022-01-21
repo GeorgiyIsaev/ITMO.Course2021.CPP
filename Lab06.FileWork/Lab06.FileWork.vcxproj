@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3b4af3ea-45ac-4d68-b024-a2daa85ec5a7}</ProjectGuid>
-    <RootNamespace>Lab06Files</RootNamespace>
+    <ProjectGuid>{c6402f71-8aa3-4edb-9097-c396eafb7905}</ProjectGuid>
+    <RootNamespace>Lab06FileWork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab06.cpp" />
-    <ClCompile Include="Lab06.Files.cpp" />
+    <ClCompile Include="Lab06.FileWork.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Lab06.h" />
     <ClInclude Include="MyInclude.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
