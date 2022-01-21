@@ -3,6 +3,7 @@
 #include <string>
 #include <cmath>
 #include <time.h>
+#include <fstream> //‘айловые потоки
 
 int GetValue(std::string text = "¬ведите число: ") {
 	std::cout << text;
