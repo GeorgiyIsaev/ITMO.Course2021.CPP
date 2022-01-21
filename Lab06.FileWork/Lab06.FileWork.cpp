@@ -1,6 +1,7 @@
 ﻿#include "MyInclude.h"
 #include "Lab06.h"
 #include "Task01.WriteToFile.h"
+#include "Task02.SaveToFile.h"
 
 
 int main()
