@@ -28,15 +28,47 @@ std::string GetText(bool b) {
 	return text;
 }
 
-void WriteF() {
+bool WriteTextToFile(const std::string& text, std::string nameFile = "TestFile.txt") {
+	//std::ios::app - опция для дозаписи в файл
+	std::ofstream out(nameFile); 
+	if (!out)
+	{
+		std::cout << "Файл открыть невозможно\n";
+		return false;
+	}
+	if (out.is_open())
+	{
+		out << text;
+	}
+	out.close();
+	return true;
+}
 
+std::string ReadTextFromFile(std::string nameFile = "TestFile.txt") {
+	std::string text, temp;
+
+	std::ifstream in(nameFile); // окрываем файл для чтения
+	if (in.is_open())
+	{
+		while (getline(in, temp))
+		{		
+			text += temp + "\n";
+		}
+	}
+	in.close();     // закрываем файл
+	return text;
 }
 
 
 void WriteToFile() {
-	std::string text = GetText(false);
+	std::string text = GetText();
 	std::cout << text << std::endl;
-
-
-
+	if (WriteTextToFile(text)) { //Запись
+		std::cout << "Файл успешно записан\n";
+		std::string text2 = ReadTextFromFile(); //Чтение
+		std::cout << text2 << std::endl;
+	}
+	else {
+		std::cout << "Нет доступа к файлу\n";
+	}
 }
