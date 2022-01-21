@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Lab05.h" />
     <ClInclude Include="MyInclude.h" />
+    <ClInclude Include="Task01.ArrayToFunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
