@@ -1,6 +1,7 @@
 ﻿#include <windows.h>
 #include "Lab05.h"
 #include "Task01.ArrayToFunc.h"
+#include "Task02.GetArray.h"
 
 int main()
 {
@@ -12,9 +13,9 @@ int main()
 
 	/*Контрольные задания */
 	/*Задание 1. Передача массива в функцию*/
-	ArrayToFunc();
-
-
+	//ArrayToFunc();
+	/*Задание 2. Возврат массива из функции*/
+	ArrayGetFunc();
 
 }
 
