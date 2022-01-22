@@ -50,7 +50,22 @@ void Task01() {
 	d3.ShowDist();
 }
 
-
+void Task03() {
+	/*”пражнение 3. »спользование массива структур*/
+	int n;
+	std::cout << "¬ведите размер массива рассто€ний ";
+	std::cin >> n;
+	Distance* masDist = new Distance[n];
+	for (int i = 0; i < n; i++)
+	{
+		masDist[i] = InputDist();
+	}
+	for (int i = 0; i < n; i++)
+	{
+		ShowDist(masDist[i]);
+	}
+	delete[] masDist;
+}
 void MainLab07() {
 	
 
@@ -59,4 +74,9 @@ void MainLab07() {
 	Task01();
 
 	/*”пражнение 2. ѕередача структуры в функцию по ссылке*/
+	//Distance AddDist(Distance d1, Distance d2)
+	//Distance AddDist(const Distance &d1, const Distance &d2)
+
+	/*”пражнение 3. »спользование массива структур*/
+	Task03();
 }
