@@ -2,6 +2,7 @@
 #include "Lab08.Student.h"
 #include "Lab08.StudentCPP.h"
 #include "Lab08.Task03.h"
+#include "Lab08.StudentDisign.h"
 
 int main()
 {
@@ -16,4 +17,5 @@ int main()
     /*Упражнение 3. Создание и удаление объекта*/
     //MainObjStudent();
     /*Упражнение 4. Использование конструктора*/
+    MainStudentDisign();
 }

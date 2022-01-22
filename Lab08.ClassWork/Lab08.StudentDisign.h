@@ -4,6 +4,10 @@
 class Student
 {
 public:
+	//конструктор
+	Student(std::string name, std::string last_name);
+
+
 	// Установка имени студента
 	void set_name(std::string student_name);
 	// Получение имени студента
@@ -24,6 +28,13 @@ private:
 	std::string name; // Имя
 	std::string last_name; // Фамилия
 };
+
+Student::Student(std::string name, std::string last_name)
+{
+	Student::set_name(name);
+	Student::set_last_name(last_name);
+}
+
 
 // Установка имени студента
 void Student::set_name(std::string student_name)
@@ -65,18 +76,20 @@ double Student::get_average_score()
 
 
 
-void MainStudentHCPP() {
-	// Создание объекта класса Student
-	Student student01;
+void MainStudentDisign() {
 	std::string name;
 	std::string last_name;
-	int scores[5];
 	// Ввод имени с клавиатуры
 	std::cout << "Name: ";
 	getline(std::cin, name);
 	// Ввод фамилии
 	std::cout << "Last name: ";
 	getline(std::cin, last_name);
+	// Передача параметров конструктору
+	Student* student02 = new Student(name, last_name);
+
+		// Оценки
+		int scores[5];
 	// Сумма всех оценок
 	int sum = 0;
 	// Ввод промежуточных оценок
@@ -86,15 +99,16 @@ void MainStudentHCPP() {
 		// суммирование
 		sum += scores[i];
 	}
-	// Сохранение имени и фамилии в объект класса Student
-	student01.set_name(name);
-	student01.set_last_name(last_name);
-	// Сохранение промежуточных оценок в объект класса Student
-	student01.set_scores(scores);
+	// Сохраняем промежуточные оценки в объект класса Student
+	student02->set_scores(scores);
+	// Считаем средний балл
 	double average_score = sum / 5.0;
-	// Сохранение среднего балла в объект класса Student
-	student01.set_average_score(average_score);
-	std::cout << "Average ball for " << student01.get_name() << " "
-		<< student01.get_last_name() << " is "
-		<< student01.get_average_score() << std::endl;
+	// Сохраняем средний балл в объект класса Student
+	student02->set_average_score(average_score);
+	// Выводим данные по студенту
+	std::cout << "Average ball for " << student02->get_name() << " "
+		<< student02->get_last_name() << " is "
+		<< student02->get_average_score() << std::endl;
+	// Удаление объекта student из памяти
+	delete student02;
 }
