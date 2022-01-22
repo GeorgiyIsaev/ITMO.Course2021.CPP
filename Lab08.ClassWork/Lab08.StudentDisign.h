@@ -22,12 +22,29 @@ public:
 	void set_average_score(double ball);
 	// Получение среднего балла
 	double get_average_score();
+
+	// Запись данных о студенте в файл
+	void save();
 private:
 	int scores[5]; // Промежуточные оценки
 	double average_score; // Средний балл
 	std::string name; // Имя
 	std::string last_name; // Фамилия
 };
+
+
+// Запись данных о студенте в файл
+void Student::save()
+{
+	std::ofstream fout("students.txt", std::ios::app);
+	fout << Student::get_name() << " "
+		<< Student::get_last_name() << " ";
+	for (int i = 0; i < 5; ++i) {
+		fout << Student::scores[i] << " ";
+	}
+	fout << std::endl;
+	fout.close();
+}
 
 Student::Student(std::string name, std::string last_name)
 {
