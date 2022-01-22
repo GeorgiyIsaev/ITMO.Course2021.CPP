@@ -8,10 +8,10 @@ struct Distance
 	double inches;
 	void ShowDist()
 	{
-		cout << feet << "\'-" << inches << "\"\n";
+		std::cout << feet << "\'-" << inches << "\"\n";
 	}
 };
-Distance AddDist(Distance d1, Distance d2)
+Distance AddDist(const Distance& d1, const Distance& d2)
 {
 	Distance d;
 	d.feet = d1.feet + d2.feet;
@@ -37,10 +37,7 @@ void ShowDist(Distance d)
 	std::cout << d.feet << "\'-" << d.inches << "\"\n";
 }
 
-void MainLab07() {
-	
-
-	/*Практическое занятие 7. Применение структур и кортежей */
+void Task01() {
 	/*Упражнение 1. Реализация структуры Distance*/
 	Distance d1 = InputDist();
 	Distance d2 = { 1, 6.25 };
@@ -48,4 +45,18 @@ void MainLab07() {
 	ShowDist(d1);
 	ShowDist(d2);
 	ShowDist(d3);
+	d1.ShowDist();
+	d2.ShowDist();
+	d3.ShowDist();
+}
+
+
+void MainLab07() {
+	
+
+	/*Практическое занятие 7. Применение структур и кортежей */
+	/*Упражнение 1. Реализация структуры Distance*/
+	Task01();
+
+	/*Упражнение 2. Передача структуры в функцию по ссылке*/
 }
