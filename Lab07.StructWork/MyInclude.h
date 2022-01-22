@@ -5,6 +5,8 @@
 #include <time.h>
 #include <fstream> //‘айловые потоки
 #include <windows.h>
+#include <tuple> //кортежи
+#include <vector> //вектора
 
 int GetValue(std::string text = "¬ведите число: ") {
 	std::cout << text;

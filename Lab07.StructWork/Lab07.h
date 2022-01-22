@@ -66,12 +66,34 @@ void Task03() {
 	}
 	delete[] masDist;
 }
+
+/*Упражнение 4. Применение кортежей для представления данных*/
+void printTupleOfThree(std::tuple<std::string, int, double> t)
+{
+	std::cout << "("
+		<< std::get<0>(t) << ", "
+		<< std::get<1>(t) << ", "
+		<< std::get<2>(t) << ")" << std::endl;
+}
+
+
+void Task04() {
+	/*Упражнение 4. Применение кортежей для представления данных*/
+	std::vector<std::string> v1{ "one", "two", "three", "four", "five", "six" };
+	std::vector<int> v2 = { 1, 2, 3, 4, 5, 6 };
+	std::vector<double> v3 = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6 };
+
+
+	auto t0 = make_tuple(v1[0], v2[0], v3[0]);
+	printTupleOfThree(t0);
+}
+
 void MainLab07() {
 	
 
 	/*Практическое занятие 7. Применение структур и кортежей */
 	/*Упражнение 1. Реализация структуры Distance*/
-	Task01();
+	//Task01();
 
 	/*Упражнение 2. Передача структуры в функцию по ссылке*/
 	//Distance AddDist(Distance d1, Distance d2)
@@ -79,4 +101,8 @@ void MainLab07() {
 
 	/*Упражнение 3. Использование массива структур*/
 	Task03();
+
+	/*Упражнение 4. Применение кортежей для представления данных*/
+
+
 }
