@@ -32,5 +32,8 @@
     <ClInclude Include="Lab08.StudentCPP.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Lab08.StudentDisign.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

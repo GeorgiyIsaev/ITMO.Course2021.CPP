@@ -1,7 +1,7 @@
 #pragma once
 #include "MyInclude.h"
 
-class StudentCPP
+class Student
 {
 public:
 	// Установка имени студента
@@ -26,48 +26,48 @@ private:
 };
 
 // Установка имени студента
-void StudentCPP::set_name(std::string student_name)
+void Student::set_name(std::string student_name)
 {
-	StudentCPP::name = student_name;
+	Student::name = student_name;
 }
 // Получение имени студента
-std::string StudentCPP::get_name()
+std::string Student::get_name()
 {
-	return StudentCPP::name;
+	return Student::name;
 }
 // Установка фамилии студента
-void StudentCPP::set_last_name(std::string student_last_name)
+void Student::set_last_name(std::string student_last_name)
 {
-	StudentCPP::last_name = student_last_name;
+	Student::last_name = student_last_name;
 }
 // Получение фамилии студента
-std::string StudentCPP::get_last_name()
+std::string Student::get_last_name()
 {
-	return StudentCPP::last_name;
+	return Student::last_name;
 }
 // Установка промежуточных оценок
-void StudentCPP::set_scores(int scores[])
+void Student::set_scores(int scores[])
 {
 	for (int i = 0; i < 5; ++i) {
-		StudentCPP::scores[i] = scores[i];
+		Student::scores[i] = scores[i];
 	}
 }
 // Установка среднего балла
-void StudentCPP::set_average_score(double ball)
+void Student::set_average_score(double ball)
 {
-	StudentCPP::average_score = ball;
+	Student::average_score = ball;
 }
 // Получение среднего балла
-double StudentCPP::get_average_score()
+double Student::get_average_score()
 {
-	return StudentCPP::average_score;
+	return Student::average_score;
 }
 
 
 
 void MainStudentHCPP() {
 	// Создание объекта класса Student
-	StudentCPP student01;
+	Student student01;
 	std::string name;
 	std::string last_name;
 	int scores[5];

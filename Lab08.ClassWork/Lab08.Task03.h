@@ -4,7 +4,7 @@
 
 void MainObjStudent() {
 	// Выделение памяти для объекта Student
-	Student* student02 = new Student;
+	StudentCPP* student02 = new StudentCPP;
 	std::string name;
 	std::string last_name;
 	// Ввод имени с клавиатуры
