@@ -143,6 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab08.Student.h" />
+    <ClInclude Include="Lab08.StudentCPP.h" />
+    <ClInclude Include="Lab08.Task03.h" />
     <ClInclude Include="MyInclude.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
