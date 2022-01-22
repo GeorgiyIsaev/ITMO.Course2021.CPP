@@ -20,4 +20,5 @@ int main()
     MainStudentDisign();
 
     /*Упражнение 5. Сохранение данных в файл*/
+    //MainStudentDisign();
 }
