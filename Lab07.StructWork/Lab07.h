@@ -77,6 +77,8 @@ void printTupleOfThree(std::tuple<std::string, int, double> t)
 }
 
 
+
+
 void Task04() {
 	/*Упражнение 4. Применение кортежей для представления данных*/
 	std::vector<std::string> v1{ "one", "two", "three", "four", "five", "six" };
@@ -86,6 +88,25 @@ void Task04() {
 
 	auto t0 = make_tuple(v1[0], v2[0], v3[0]);
 	printTupleOfThree(t0);
+}
+
+
+
+using Tuple = std::tuple<std::string, int, double>;
+Tuple funtup(std::string s, int a, double d)
+{
+	s.append("!");
+	return make_tuple(s, a, d * 10);
+}
+
+void Task05() {
+	/*Упражнение 5. Возвращение кортежа из функции*/
+	typedef std::tuple<std::string, int, double> Tuple;
+	void printTupleOfThree(Tuple t);
+
+
+	auto t1 = funtup("string", 1, 2.3);
+	printTupleOfThree(t1);
 }
 
 void MainLab07() {
@@ -100,9 +121,11 @@ void MainLab07() {
 	//Distance AddDist(const Distance &d1, const Distance &d2)
 
 	/*Упражнение 3. Использование массива структур*/
-	Task03();
+	//Task03();
 
 	/*Упражнение 4. Применение кортежей для представления данных*/
+	//Task04();
 
-
+	/*Упражнение 5. Возвращение кортежа из функции*/
+	Task05();
 }
