@@ -13,7 +13,7 @@
 решение этого уравнения (корни уравнения) и флаг, 
 показывающий наличие корней.*/
 
-std::string SquareRootStr(double a, double b, double c) {
+std::string SqRootStr(double a, double b, double c) {
 	std::string text = std::to_string(a) + "x^2 + " +
 		std::to_string(b) + "x + " + std::to_string(c) + " = 0";
 	return text;
@@ -21,9 +21,9 @@ std::string SquareRootStr(double a, double b, double c) {
 
 std::tuple<int, double, double> RootSqrt(double a, double b, double c)
 {
-	double x1, double x2;
+	double x1 = 0; double x2 = 0;
 	double D = b * b - 4 * a * c;
-	int flag;
+	int flag=0;
 	if (D > 0)
 	{
 		x1 = ((-1) * b + sqrt(D)) / (2 * a);
@@ -45,20 +45,18 @@ std::tuple<int, double, double> RootSqrt(double a, double b, double c)
 }
 
 void MainTupleSqrtRoot() {
+	/*Задание 3. Решение квадратного уравнения*/
 	std::cout << "Значения для квадратного уравнения ax^2+bx+c=0" << std::endl;
 	double a = GetValue("a= ");
 	double	b = GetValue("b= ");
 	double	c = GetValue("c= ");
-	std::cout << "Уравнения: " << SquareRootStr(a, b, c) << std::endl;
-
-	double	x1, x2; //корни
+	std::cout << "Уравнения: " << SqRootStr(a, b, c) << std::endl;
 
 	//std::tie(a, b) -  распкаовавыет кортеж в переменные ();
-	std::tuple<int, double, double> result = RootSqrt(a, b, c);
-	int flag = result.get<1>();
-	int flag = result.get<1>();
-	switch ()
-	{
+	double	x1, x2; //корни
+	int flag;
+	std::tie(flag, x1, x2) = RootSqrt(a, b, c);
+	switch (flag){
 	case 1:
 		std::cout << "x1 = " << x1 << "\nx2 = " << x2 << std::endl;
 		break;
