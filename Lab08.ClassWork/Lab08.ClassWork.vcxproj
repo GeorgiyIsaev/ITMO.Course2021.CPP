@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab08.ClassWork.cpp" />
+    <ClCompile Include="Lab08.StudentCPP.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab08.Student.h" />
     <ClInclude Include="MyInclude.h" />
+    <ClInclude Include="Lab08.StudentCPP.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
