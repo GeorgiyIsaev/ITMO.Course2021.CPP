@@ -25,6 +25,8 @@ public:
 
 	// Запись данных о студенте в файл
 	void save();
+	// Деструктор класса Student
+	~Student();
 private:
 	int scores[5]; // Промежуточные оценки
 	double average_score; // Средний балл
@@ -45,6 +47,12 @@ void Student::save()
 	fout << std::endl;
 	fout.close();
 }
+// Деструктор Student
+Student::~Student()
+{
+	Student::save();
+}
+
 
 Student::Student(std::string name, std::string last_name)
 {
