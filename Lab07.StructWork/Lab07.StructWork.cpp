@@ -2,6 +2,7 @@
 #include "Lab07.h"
 #include "Task01.Time.h"
 #include "Task02.SqrtFindX.h"
+#include "Task03.SqrtRootX.h"
 
 int main()
 {
@@ -16,8 +17,9 @@ int main()
     //TestTime();
 
     /*Задание 2. Решение квадратного уравнения*/
-    MainRootEquation();
+    //MainRootEquation();
 
     /*Задание 3. Решение квадратного уравнения*/
+    MainTupleSqrtRoot();
 }
 
