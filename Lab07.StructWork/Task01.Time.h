@@ -23,19 +23,21 @@ struct Time {
        this->hours = hours; 
        this->minutes = minutes;
        this->seconds = seconds;
+       RecountTime();
     }
     void CinTime() {
         this->hours = GetValue("¬ведите hours: ");
         this->minutes = GetValue("¬ведите minutes: ");
         this->seconds = GetValue("¬ведите seconds: ");
+        RecountTime();
     }
     void RecountTime() {
-        while (seconds > 60) {
-            seconds = -60;
+        while (seconds > 59) {
+            seconds -= 60;
             minutes++;
         }
-        while (minutes > 60) {
-            minutes = -60;
+        while (minutes > 59) {
+            minutes -= 60;
             hours++;
         }
     }
@@ -48,3 +50,15 @@ struct Time {
         return text;
     }
 };
+
+void TestTime() {
+    Time t1;
+    t1.SetTime(22, 12, 12);
+    std::cout << t1.GetStrTime() << std::endl;
+    Time t2;
+    t2.SetTime(22, 554, 234);
+    std::cout << t2.GetStrTime() << std::endl;
+    Time t3;
+    t3.CinTime();
+    std::cout << t3.GetStrTime() << std::endl;
+}
