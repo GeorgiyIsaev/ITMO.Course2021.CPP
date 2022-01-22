@@ -49,6 +49,22 @@ struct Time {
             std::to_string(seconds) + "s}";
         return text;
     }
+    Time AddTime(const Time& timeToAdd) {
+        Time t;
+        t.hours = hours + timeToAdd.hours;
+        t.minutes = minutes + timeToAdd.minutes;
+        t.seconds = seconds + timeToAdd.seconds;
+        t.RecountTime();
+        return t;
+    }
+    Time SubTime(const Time& timeToSubtract) {
+        Time t;
+        t.hours = hours - timeToSubtract.hours;
+        t.minutes = minutes - timeToSubtract.minutes;
+        t.seconds = seconds - timeToSubtract.seconds;
+        t.RecountTime();
+        return t;
+    }
 };
 
 void TestTime() {
@@ -61,4 +77,8 @@ void TestTime() {
     Time t3;
     t3.CinTime();
     std::cout << t3.GetStrTime() << std::endl;
+    Time t4 = t2.SubTime(t1);
+    std::cout << t4.GetStrTime() << std::endl;
+    Time t5 = t2.AddTime(t1);
+    std::cout << t5.GetStrTime() << std::endl;
 }
