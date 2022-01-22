@@ -1,7 +1,7 @@
 #pragma once
 #include "MyInclude.h"
 
-class Student
+class StudentOne
 {
 public:
 	// Установка имени студента
@@ -50,7 +50,7 @@ private:
 
 void MainStudent() {
 	// Создание объекта класса Student
-	Student student01;
+	StudentOne student01;
 	std::string name;
 	std::string last_name;
 	int scores[5];

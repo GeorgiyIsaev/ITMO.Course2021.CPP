@@ -1,6 +1,6 @@
 ﻿#include "MyInclude.h"
 #include "Lab08.Student.h"
-#include "Lab08.StudentCPP.h"
+//#include "Lab08.StudentCPP.h"
 
 int main()
 {
@@ -9,7 +9,7 @@ int main()
     /*Практическое занятие 8. Объявление и реализация класса. 
     Реализация инкапсуляции. Конструкторы и деструкторы.
     /*Упражнение 1. Реализация сущности – студент в виде класса*/
-    // MainStudent();
+     MainStudent();
 
     /*Упражнение 2. Разделение реализации и представления*/
     //MainStudentHCPP();
