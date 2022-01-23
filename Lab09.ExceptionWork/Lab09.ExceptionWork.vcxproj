@@ -142,6 +142,7 @@
     <ClCompile Include="Lab09.ExceptionWork.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Lab09.h" />
     <ClInclude Include="MyInclude.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
