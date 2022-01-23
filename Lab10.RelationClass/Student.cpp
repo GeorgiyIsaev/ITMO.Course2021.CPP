@@ -65,3 +65,20 @@ double Student::get_average_score()
 {
 	return Student::average_score;
 }
+
+
+/*Ìועמהû הכÿ Ëאב 10*/
+Student::Student(std::string name, std::string last_name, IdCard* id)
+{
+	Student::set_name(name);
+	Student::set_last_name(last_name);
+	Student::setIdCard(id);
+}
+void Student::setIdCard(IdCard* c)
+{
+	iCard = c;
+}
+IdCard Student::getIdCard()
+{
+	return *iCard;
+}

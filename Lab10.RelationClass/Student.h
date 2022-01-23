@@ -7,7 +7,7 @@ class Student
 public:
 	//конструктор
 	Student(std::string name, std::string last_name);
-
+	Student(std::string name, std::string last_name, IdCard* id);
 
 	// Установка имени студента
 	void set_name(std::string student_name);
