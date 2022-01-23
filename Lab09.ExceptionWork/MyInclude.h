@@ -23,3 +23,8 @@ int GetValue(std::string text = "¬ведите число: ") {
 	}
 	return value;
 }
+
+int GetRandomInt(int start=0, int end=10) {
+	srand(time(0)); // автоматическа€ рандомизаци€
+	int val = start + rand() % end;
+}

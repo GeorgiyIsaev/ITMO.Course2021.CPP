@@ -18,6 +18,13 @@ private:
 	double ab;
 	double bc;
 	double ca;
+	void isExistsException(double ab, double bc, double ca) {
+		if (ab < 0 || bc < 0 || ca < 0)
+			throw NoExistsException("Одна из сторон получила отрицальное значений!");
+		if ((ab + bc) < ca) throw NoExistsException(ca);
+		if ((ab + ca) < bc) throw NoExistsException(bc);
+		if ((ca + bc) < ab) throw NoExistsException(ab);
+	}
 public:	
 	Triangle(double ab, double bc, double ca) {
 		isExistsException(ab, bc, ca);
@@ -28,30 +35,25 @@ public:
 		double p = (ab + bc + ca) / 2; //полупериметр		
 		double area = sqrt(p * (p - ab) * (p - bc) * (p - ca));
 		return area;
-	}
-	void isExistsException(double ab, double bc, double ca) {
-		if (ab < 0 || bc < 0 || ca < 0)
-			throw NoExistsException("Одна из сторон получила отрицальное значений!");
-		if ((ab + bc) < ca) throw NoExistsException(ca);
-		if ((ab + ca) < bc) throw NoExistsException(bc);
-		if ((ca + bc) < ab) throw NoExistsException(ab);
+	}	
+	std::string strInfo() {
+		return "Треугольник: [" + std::to_string(ab) + ":" +
+			std::to_string(bc) + ":" +
+			std::to_string(ca) + "]; S = " + 
+			std::to_string(AreaTriangle());
 	}
 };
 
 
 void Task01Triangle() {
-	Triangle tr1(1,2,3);
 
+	double ab = 
+	Triangle tr1(1, 2, 3);
+	std::cout << tr1.strInfo() << std::endl;
 
-	double ab;
-	double bc;
-	double ca;
-	int size = 10;
-	Triangle* triangles = new Triangle[size];
-	for (int i = 0; i < size; i++) {
-
-	}
 }
+	
+
 
 
 
