@@ -1,4 +1,5 @@
 #pragma once
+#include "MyInclude.h"
 
 /*Задание 1. Класс Time
 Создайте класс с именем Time, содержащий три поля
@@ -51,9 +52,9 @@ public:
         RecountTime();
     }
     void CinTime() {
-        this->hours = GetValue("Введите hours: ");
-        this->minutes = GetValue("Введите minutes: ");
-        this->seconds = GetValue("Введите seconds: ");
+        this->hours = GetValue("Введите h: ");
+        this->minutes = GetValue("Введите m: ");
+        this->seconds = GetValue("Введите s: ");
         RecountTime();
     } 
     std::string StrTime()const {
@@ -91,15 +92,15 @@ public:
 };
 
 
-void MainTime() {   
-        Time timeCin;
-        timeCin.CinTime();
-        std::cout << timeCin.StrTime() << std::endl;
-        Time t2(20, 200, 30);
-        std::cout << t2.StrTime() << std::endl;
-      
-        Time t4 = t2.SubTime(timeCin);
-        std::cout << t4.StrTime() << std::endl;
-        Time t5 = t2.AddTime(timeCin);
-        std::cout << t5.StrTime() << std::endl;   
+void MainTime() {
+    Time timeCin;
+    timeCin.CinTime();
+    std::cout << timeCin.StrTime() << std::endl;
+    Time t2(20, 200, 30);
+    std::cout << t2.StrTime() << std::endl;
+
+    Time t4 = t2.SubTime(timeCin);
+    std::cout << t4.StrTime() << std::endl;
+    Time t5 = t2.AddTime(timeCin);
+    std::cout << t5.StrTime() << std::endl;
 }
