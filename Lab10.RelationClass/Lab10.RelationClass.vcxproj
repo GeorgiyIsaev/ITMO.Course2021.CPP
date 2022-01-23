@@ -142,12 +142,14 @@
     <ClCompile Include="IdCard.cpp" />
     <ClCompile Include="Lab10.RelationClass.cpp" />
     <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Task01.Dot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IdCard.h" />
     <ClInclude Include="Lab10.h" />
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="Student.h" />
+    <ClInclude Include="Task01.Dot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
