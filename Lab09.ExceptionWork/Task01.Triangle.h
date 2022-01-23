@@ -28,7 +28,7 @@ private:
 public:	
 	Triangle(double ab, double bc, double ca) {
 		isExistsException(ab, bc, ca);
-		this->ab = ab; this->bc = ab; this->ab = ca;
+		this->ab = ab; this->bc = ab; this->ca = ca;
 	}
 	double AreaTriangle() {
 		/*Расчет площади треугольника*/
@@ -37,33 +37,42 @@ public:
 		return area;
 	}	
 	std::string strInfo() {
-		return "Треугольник: [" + std::to_string(ab) + ":" +
+		std::ostringstream osrt;
+		osrt << std::fixed << std::setprecision(1) <<
+			"Треугольник: [" << ab << ":" << bc
+			<< ":" <<	ca << "]; S = " <<AreaTriangle();
+		return osrt.str();
+
+
+		/*return "Треугольник: [" + std::to_string(ab) + ":" +
 			std::to_string(bc) + ":" +
 			std::to_string(ca) + "]; S = " + 
-			std::to_string(AreaTriangle());
+			std::to_string(AreaTriangle());*/
 	}
 };
 
 
+void printTR(double ab, double bc, double ca) {
+	std::cout << "Генирация треугольника из сторон: " << std::fixed << std::setprecision(1) <<
+		ab << ": " << bc << ": " << ca << "\n";
+}
+
 void Task01Triangle() {
+
 	for (int i = 0; i < 10; i++) {
-		double ab = GetRandomInt(-5, 5);
-		std::cout << ab << std::endl;
-	}std::cout << std::endl;
-	for (int i = 0; i < 10; i++) {
-		double ab = GetRandomInt(0, 5);
-		std::cout << ab << std::endl;
-	}std::cout << std::endl;
-	for (int i = 0; i < 10; i++) {
-		double ab = GetRandomInt(5, 10);
-		std::cout << ab << std::endl;
-	}std::cout << std::endl;
-	for (int i = 0; i < 10; i++) {
-		double ab = GetRandomInt(10, 12);
-		std::cout << ab << std::endl;
-	}std::cout << std::endl;
-	Triangle tr1(1, 2, 3);
-	std::cout << tr1.strInfo() << std::endl;
+		double ab = GetRandomInt(1, 10);
+		double bc = GetRandomInt(1, 10);
+		double ca = GetRandomInt(-5, 5);
+		printTR(ab, bc, ca);
+		try {
+			Triangle tr1(ab, bc, ca);
+			std::cout << tr1.strInfo() << std::endl;
+		}
+		catch (NoExistsException& error) {
+			std::cout << "\tОШИБКА: ";
+			error.printMessage();
+		}
+	}
 
 }
 	
