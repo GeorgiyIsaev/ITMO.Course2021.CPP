@@ -3,6 +3,7 @@
 #include "Lab08.StudentCPP.h"
 #include "Lab08.Task03.h"
 #include "Lab08.StudentDisign.h"
+#include "Task01.Time.h"
 
 int main()
 {
@@ -23,5 +24,5 @@ int main()
 
     /*Контрольные задания
     /*Задание 1. Класс Time*/
-
+    MainTime();
 }
