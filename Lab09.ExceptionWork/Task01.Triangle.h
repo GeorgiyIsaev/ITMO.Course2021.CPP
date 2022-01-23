@@ -46,8 +46,22 @@ public:
 
 
 void Task01Triangle() {
-
-	double ab = 
+	for (int i = 0; i < 10; i++) {
+		double ab = GetRandomInt(-5, 5);
+		std::cout << ab << std::endl;
+	}std::cout << std::endl;
+	for (int i = 0; i < 10; i++) {
+		double ab = GetRandomInt(0, 5);
+		std::cout << ab << std::endl;
+	}std::cout << std::endl;
+	for (int i = 0; i < 10; i++) {
+		double ab = GetRandomInt(5, 10);
+		std::cout << ab << std::endl;
+	}std::cout << std::endl;
+	for (int i = 0; i < 10; i++) {
+		double ab = GetRandomInt(10, 12);
+		std::cout << ab << std::endl;
+	}std::cout << std::endl;
 	Triangle tr1(1, 2, 3);
 	std::cout << tr1.strInfo() << std::endl;
 

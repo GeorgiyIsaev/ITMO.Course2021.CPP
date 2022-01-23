@@ -25,6 +25,8 @@ int GetValue(std::string text = "Введите число: ") {
 }
 
 int GetRandomInt(int start=0, int end=10) {
-	srand(time(0)); // автоматическая рандомизация
-	int val = start + rand() % end;
+	//srand(time(0)); // автоматическая рандомизация
+	int step = end - start +1;
+	int val = start + rand() % step;
+	return val;
 }
