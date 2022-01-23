@@ -1,12 +1,22 @@
 #pragma once
-#include "MyInclude.h"
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <time.h>
+#include <fstream> //Файловые потоки
+#include <windows.h>
+#include <tuple> //кортежи
+#include <vector> //вектора
+#include <iomanip>
+#include <sstream>
 #include "IdCard.h"
+
 
 class Student
 {
 public:
 	//конструктор
-	Student(std::string name, std::string last_name);
+	//Student(std::string name, std::string last_name);
 	Student(std::string name, std::string last_name, IdCard* id);
 
 	// Установка имени студента

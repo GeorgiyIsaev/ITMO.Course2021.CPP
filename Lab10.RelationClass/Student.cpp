@@ -21,11 +21,11 @@ Student::~Student()
 }
 
 
-Student::Student(std::string name, std::string last_name)
-{
-	Student::set_name(name);
-	Student::set_last_name(last_name);
-}
+//Student::Student(std::string name, std::string last_name)
+//{
+//	Student::set_name(name);
+//	Student::set_last_name(last_name);
+//}
 
 
 // Установка имени студента
