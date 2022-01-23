@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Task01">
+      <UniqueIdentifier>{cdbc7adc-e417-4b14-82f3-788e58e2c34b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab09.ExceptionWork.cpp">
@@ -25,6 +28,9 @@
     </ClInclude>
     <ClInclude Include="Lab09.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Task01.Triangle.h">
+      <Filter>Файлы заголовков\Task01</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
