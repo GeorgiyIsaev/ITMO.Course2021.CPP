@@ -146,6 +146,7 @@
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="Task01.NoExistsException.h" />
     <ClInclude Include="Task01.Triangle.h" />
+    <ClInclude Include="Task02.Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
