@@ -89,6 +89,12 @@ public:
         t.RecountTime();
         return t;
     }
+    Time operator+(const Time& b) {
+        return Time(this->hours + b.hours, this->minutes + b.minutes, this->seconds + b.seconds);
+    }
+    Time operator-(const Time& b) {
+        return Time(this->hours - b.hours, this->minutes - b.minutes, this->seconds - b.seconds);
+    }
 };
 
 
@@ -96,11 +102,18 @@ void MainTime() {
     Time timeCin;
     timeCin.CinTime();
     std::cout << timeCin.StrTime() << std::endl;
-    Time t2(20, 200, 30);
+    Time t2(11, 59, 59);
     std::cout << t2.StrTime() << std::endl;
 
+    /*Методы*/
     Time t4 = t2.SubTime(timeCin);
     std::cout << t4.StrTime() << std::endl;
     Time t5 = t2.AddTime(timeCin);
     std::cout << t5.StrTime() << std::endl;
+
+    /*Операторами*/
+    Time t6 = t2 - timeCin;
+    std::cout << t6.StrTime() << std::endl;
+    Time t7 = t2 + timeCin;
+    std::cout << t7.StrTime() << std::endl;
 }
