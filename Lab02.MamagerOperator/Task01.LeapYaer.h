@@ -49,6 +49,8 @@ std::string IsLeap(int yaer) {
 }
 
 void LeapYaer() {
+	/*Контрольные задания.
+	/*Задание 1. Определение високосного года*/
 	int yaer = getYear();
 	std::string text = IsLeap(yaer);
 	std::cout << text << std::endl;
