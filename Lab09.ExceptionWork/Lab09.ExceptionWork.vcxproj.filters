@@ -32,5 +32,8 @@
     <ClInclude Include="Task01.Triangle.h">
       <Filter>Файлы заголовков\Task01</Filter>
     </ClInclude>
+    <ClInclude Include="Task01.NoExistsException.h">
+      <Filter>Файлы заголовков\Task01</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
