@@ -1,6 +1,8 @@
 ﻿#include "MyInclude.h"
 #include "Lab09.h"
 #include "Task01.Triangle.h"
+#include "Task02.Time.h"
+
 
 int main()
 {
@@ -12,6 +14,7 @@ int main()
 
     /*Контрольные задания
     /*Задание 1. Безопасная реализация класса Triangle*/
-    Task01Triangle();
-
+    //Task01Triangle();
+    /*Задание 2. Безопасная реализация класса Time*/
+    MainTime();
 }
