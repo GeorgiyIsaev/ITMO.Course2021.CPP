@@ -91,6 +91,15 @@ public:
 };
 
 
-void MainTime() {
-
+void MainTime() {   
+        Time timeCin;
+        timeCin.CinTime();
+        std::cout << timeCin.StrTime() << std::endl;
+        Time t2(20, 200, 30);
+        std::cout << t2.StrTime() << std::endl;
+      
+        Time t4 = t2.SubTime(timeCin);
+        std::cout << t4.StrTime() << std::endl;
+        Time t5 = t2.AddTime(timeCin);
+        std::cout << t5.StrTime() << std::endl;   
 }
