@@ -1,5 +1,6 @@
 ﻿#include "Lab11.Main.h"
 #include "Task01.Time.h"
+#include "Task02.SortVector.h"
 
 
 int main()
@@ -11,7 +12,7 @@ int main()
 
 	/*Контрольные задания*/
 	/*Задание 1. Перегрузка операторов в классе Time*/
-	MainTime();
+	//MainTime();
 	/*Задание 2. Реализация сортировки точек в векторе*/
-
+	MainSortVector();
 }
