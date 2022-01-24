@@ -22,6 +22,10 @@ void Task01(){
 		std::cout << "Продолжать(у/n) ? ";
 		std::cin >> choice;
 	} while (choice == 'y');
+
+	for (int j = 0; j < n; j++) //цикл по всем объектам
+		pubarr[j]->putdata(); //вывести данные о публикации
+	std::cout << std::endl;
 }
 
 void MainLab13() {
