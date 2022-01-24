@@ -146,6 +146,7 @@
     <ClInclude Include="DistanceF.h" />
     <ClInclude Include="Lab11.Main.h" />
     <ClInclude Include="MyInclude.h" />
+    <ClInclude Include="StudentGrade.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

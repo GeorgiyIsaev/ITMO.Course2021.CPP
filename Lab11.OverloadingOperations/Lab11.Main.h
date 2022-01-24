@@ -1,6 +1,7 @@
 #pragma once
 #include "Distance.h"
 #include "DistanceF.h"
+#include "StudentGrade.h"
 
 void Task01() {
 	/*Упражнение 1. Перегрузка бинарных операций*/
@@ -56,6 +57,22 @@ void Task03() {
 	std::cout << "\ndist4 = " << dist4;
 }
 
+void Task04() {
+	/*Упражнение 4. Перегрузка оператора индексации*/
+	GradeMap grades;
+	grades["John"] = 'A';
+	grades["Martin"] = 'B';
+	std::cout << "John has a grade of " << grades["John"] << std::endl;
+	std::cout << "Martin has a grade of " << grades["Martin"] << std::endl;
+	std::cout << "New name and grade?" << std::endl;
+	
+	std::string name;
+	char grade;
+	std::cin >> name >> grade;
+	grades[name] = grade;
+	std::cout << name << " has a grade of " << grades[name] << std::endl;
+}
+
 void MainLab11() {
 	/*Практическое занятие 11. Перегрузка операций
 	/*Упражнение 1. Перегрузка бинарных операций*/
@@ -65,5 +82,8 @@ void MainLab11() {
 	//Task02();
 
 	/*Упражнение 3. Перегрузка операций операндов различных типов*/
-	Task03();
+	//Task03();
+
+	/*Упражнение 4. Перегрузка оператора индексации*/
+	Task04();
 }
