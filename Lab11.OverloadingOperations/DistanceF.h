@@ -26,11 +26,16 @@ public:
 		std::cout << "\nÂגוהטעו קטסכמ ה‏ילמג : ";
 		std::cin >> inches;
 	}
+	void getRandomDist()
+	{	
+		feet = GetRandomInt(5, 25);
+		inches = GetRandomInt(5, 25);
+	}
 	void showdist()
 	{
 		std::cout << feet << "\" - " << inches << "\"\n";
 	}
-	DistanceF operator+ (const Distance& d2) const
+	DistanceF operator+ (const DistanceF& d2) const
 	{
 		int f = feet + d2.feet;
 		float i = inches + d2.inches;
@@ -46,6 +51,28 @@ public:
 		int f = feet - d2.feet;
 		float i = inches - d2.inches;
 		if (i <= 0.0)
+		{
+			i += 12.0;
+			f--;
+		}
+		return DistanceF(f, i);
+	}
+	DistanceF operator+ (const double& value) const
+	{
+		int f = feet;
+		float i = inches + value;
+		while (i >= 12.0)
+		{
+			i -= 12.0;
+			f++;
+		}
+		return DistanceF(f, i);
+	}
+	DistanceF operator- (const double& value) const
+	{
+		int f = feet;
+		float i = inches - value;
+		while (i <= 0.0)
 		{
 			i += 12.0;
 			f--;
