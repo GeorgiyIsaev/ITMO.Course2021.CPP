@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab09.ExceptionWork", "Lab0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab10.RelationClass", "Lab10.RelationClass\Lab10.RelationClass.vcxproj", "{8D7C36E6-217D-46EF-8A99-3A276537CEDB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab11.OverloadingOperations", "Lab11.OverloadingOperations\Lab11.OverloadingOperations.vcxproj", "{0EB9C99C-B514-4107-8F95-BA1389D6C03C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{8D7C36E6-217D-46EF-8A99-3A276537CEDB}.Release|x64.Build.0 = Release|x64
 		{8D7C36E6-217D-46EF-8A99-3A276537CEDB}.Release|x86.ActiveCfg = Release|Win32
 		{8D7C36E6-217D-46EF-8A99-3A276537CEDB}.Release|x86.Build.0 = Release|Win32
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Debug|x64.ActiveCfg = Debug|x64
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Debug|x64.Build.0 = Debug|x64
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Debug|x86.ActiveCfg = Debug|Win32
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Debug|x86.Build.0 = Debug|Win32
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Release|x64.ActiveCfg = Release|x64
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Release|x64.Build.0 = Release|x64
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Release|x86.ActiveCfg = Release|Win32
+		{0EB9C99C-B514-4107-8F95-BA1389D6C03C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
