@@ -44,4 +44,13 @@ public:
 		}
 		return Distance(f, i);
 	}
+	friend std::ostream& operator<< (std::ostream& out, const Distance& dist);
 };
+
+
+
+std::ostream& operator<< (std::ostream& out, const Distance& dist)
+{
+	out << dist.feet << "\" - " << dist.inches << "\"\n";
+	return out;
+}

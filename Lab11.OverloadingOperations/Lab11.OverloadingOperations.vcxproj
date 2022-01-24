@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Distance.h" />
+    <ClInclude Include="DistanceF.h" />
     <ClInclude Include="Lab11.Main.h" />
     <ClInclude Include="MyInclude.h" />
   </ItemGroup>

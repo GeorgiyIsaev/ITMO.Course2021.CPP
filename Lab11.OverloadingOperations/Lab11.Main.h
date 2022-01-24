@@ -1,10 +1,8 @@
 #pragma once
 #include "Distance.h"
+#include "DistanceF.h"
 
-
-
-void MainLab11() {
-	/*Практическое занятие 11. Перегрузка операций
+void Task01() {
 	/*Упражнение 1. Перегрузка бинарных операций*/
 	Distance dist1, dist2, dist3, dist4;
 
@@ -25,4 +23,23 @@ void MainLab11() {
 	dist3 = dist1 - dist2;
 	std::cout << "\ndist3 = ";
 	dist3.showdist();
+
+	/*Через френд функцию*/
+	std::cout << "\ndist1 = " << dist1;
+}
+
+
+void MainLab11() {
+	/*Практическое занятие 11. Перегрузка операций
+	/*Упражнение 1. Перегрузка бинарных операций*/
+	Task01();
+
+	/*Упражнение 2. Преобразования объектов в основные типы и наоборот*/	
+
+	DistanceF dist1 = 2.35F;
+	std::cout << "\ndist1 = " << dist1;
+	float mtrs;
+	mtrs = static_cast<float>(dist1);
+	mtrs = dist1;
+	std::cout << "\nmtrs = " << mtrs;
 }
