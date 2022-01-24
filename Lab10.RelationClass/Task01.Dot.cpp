@@ -14,3 +14,7 @@ double Dot::distanceTo(Dot point)
 {
 	return sqrt(pow(point.x - x, 2) + pow(point.y - y, 2));
 }
+double Dot::distanceTo(Dot* point)
+{
+	return sqrt(pow(point->x - x, 2) + pow(point->y - y, 2));
+}
