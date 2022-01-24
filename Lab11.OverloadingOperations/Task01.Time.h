@@ -113,7 +113,21 @@ public:
         else if (this->hours == b.hours && this->minutes == b.minutes && this->seconds < b.seconds) return true;
         else return false;
     }
+    /*Перегрузка оператра преобразования*/
+    operator int() const    {
+        return seconds + (minutes*60) + (hours*60*60);
+    }
 };
+
+/*Оператор сложения числа с Time*/
+int operator+ (int val, Time& t)
+{
+    return val + (int)t;
+}
+int operator- (int val, Time& t)
+{
+    return val - (int)t;
+}
 
 
 void MainTime() {
@@ -138,4 +152,10 @@ void MainTime() {
     std::cout << "-3333: "<< t6.StrTime() << std::endl;
     t7 = t2 + 3333;
     std::cout << "+3333: " << t7.StrTime() << std::endl;
+
+    /*Оператор сложения числа с Time*/
+    int val = 1000 - t2;
+    std::cout << "1000 - " << t2.StrTime() << " = "<< val << std::endl;
+    int val = 1000 + t2;
+    std::cout << "1000 + " << t2.StrTime() << " = " << val << std::endl;
 }
