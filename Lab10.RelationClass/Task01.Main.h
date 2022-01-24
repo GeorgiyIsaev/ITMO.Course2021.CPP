@@ -28,5 +28,6 @@ void MainTaskTriangle() {
 	Dot dotC(5, 2);
 
 	Triangle tringle(dotA, dotB, dotC);
-	std::cout << tringle.strLengthSides() << " ";
+	std::cout << tringle.StrLengthSides() << " P = " 
+		<< tringle.Perimeter() << "; S = " << tringle.Area();
 }

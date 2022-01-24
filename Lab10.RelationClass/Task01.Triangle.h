@@ -19,7 +19,7 @@ private:
 public:
 	Triangle(Dot a, Dot b, Dot c) :dotA(a), dotB(b), dotC(c) { ResetSide(); }
 	/*вывести длины сторон треугольника;*/
-	std::string strLengthSides();
+	std::string StrLengthSides();
 	/*− расчитать периметр треугольника;*/
 	double Perimeter();
 	/*− расчитать площадь треугольника*/

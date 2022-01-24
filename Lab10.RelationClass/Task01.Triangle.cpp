@@ -7,7 +7,7 @@ void Triangle::ResetSide()
 	ca = dotC.distanceTo(dotA);
 }
 
-std::string Triangle::strLengthSides()
+std::string Triangle::StrLengthSides()
 {
 	std::ostringstream osrt;
 	osrt << std::fixed << std::setprecision(1) <<
