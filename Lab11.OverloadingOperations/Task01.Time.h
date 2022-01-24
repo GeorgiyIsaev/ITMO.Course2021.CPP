@@ -36,6 +36,9 @@ private:
         }
     }
 public:
+    int GetSeconds() { return seconds; }
+    int GetMinutes() { return minutes; }
+    int GetHours() { return hours; }
     Time() {
         SetTime(0, 0, 0);
     }
@@ -92,14 +95,7 @@ public:
     }
     Time operator-(const Time& b) {
         return Time(this->hours - b.hours, this->minutes - b.minutes, this->seconds - b.seconds);
-    }
-    /*Сложение с вещественным числом*/
-    Time operator+(const int b) {
-        return Time(this->hours, this->minutes, this->seconds + b);
-    }
-    Time operator-(const int b) {
-        return Time(this->hours, this->minutes, this->seconds - b);
-    }
+    }   
     /*Сравнение*/
     bool operator>(const Time& b) {
         if (this->hours > b.hours) return true;
@@ -129,6 +125,17 @@ int operator- (int val, Time& t)
     return val - (int)t;
 }
 
+/*Оператор сложения Time c int*/
+Time operator+ (Time& t, int val)
+{
+    return Time(t.GetHours(), t.GetMinutes(), t.GetSeconds() + val);
+}
+Time operator- (Time& t, int val)
+{
+    return Time(t.GetHours(), t.GetMinutes(), t.GetSeconds() - val);
+}
+
+
 
 void MainTime() {
     Time t2(12, 60, 61);
@@ -137,11 +144,12 @@ void MainTime() {
     timeCin.CinTime();
     std::cout << timeCin.StrTime() << std::endl;
 
+    Time t6, t7;
     /*Операторы сложения*/
-    Time t6 = t2 - timeCin;
-    std::cout << t6.StrTime() << std::endl;
-    Time t7 = t2 + timeCin;
-    std::cout << t7.StrTime() << std::endl;
+    //t6 = t2 - timeCin;
+    //std::cout << t6.StrTime() << std::endl;
+    //t7 = t2 + timeCin;
+    //std::cout << t7.StrTime() << std::endl;
 
     /*Операторы сравнения*/
     if (t2 > timeCin) std::cout << t2.StrTime() <<" < "<< t2.StrTime() << std::endl;
@@ -156,6 +164,6 @@ void MainTime() {
     /*Оператор сложения числа с Time*/
     int val = 1000 - t2;
     std::cout << "1000 - " << t2.StrTime() << " = "<< val << std::endl;
-    int val = 1000 + t2;
+    val = 1000 + t2;
     std::cout << "1000 + " << t2.StrTime() << " = " << val << std::endl;
 }

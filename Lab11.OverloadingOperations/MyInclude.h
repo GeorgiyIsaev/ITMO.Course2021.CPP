@@ -9,6 +9,7 @@
 #include <vector> //вектора
 #include <iomanip> //ostringstream
 #include <sstream>
+#include <algorithm>  // sort
 
 int GetValue(std::string text = "¬ведите число: ") {
 	std::cout << text;

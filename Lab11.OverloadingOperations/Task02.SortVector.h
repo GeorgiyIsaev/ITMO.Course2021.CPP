@@ -1,5 +1,6 @@
 #pragma once
 #include "MyInclude.h"
+#include "Task02.Point.h"
 /*Задание 2. Реализация сортировки точек в векторе
 Разработайте класс Point с двумя полями вещественного
 типа – x и y и конструктором с параметрами, а также с
@@ -36,13 +37,15 @@ return 0;
 void MainSortVector() {
 	std::vector<Point> v;
 	v.push_back(Point(1, 2));
-	70
-		v.push_back(Point(10, 12));
+	v.push_back(Point(10, 12));
 	v.push_back(Point(21, 7));
 	v.push_back(Point(4, 8));
+	for (auto& point : v)
+		std::cout << point << '\n';
+	std::cout << std::endl;
 	std::sort(v.begin(), v.end()); // требуется 
-	перегрузка оператора < для // класса Point
-		for (auto& point : v)
-			std::cout << point << '\n'; // требуется 
-	перегрузка оператора << для // класса Point
+	//перегрузка оператора < для // класса Point
+	for (auto& point : v)
+		std::cout << point << '\n'; // требуется 
+	//перегрузка оператора << для // класса Point
 }

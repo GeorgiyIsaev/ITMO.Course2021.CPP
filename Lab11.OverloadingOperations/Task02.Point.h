@@ -2,10 +2,12 @@
 #include "MyInclude.h"
 
 class Point {
+private:
 	int x;
 	int y;
-	Point() { RandomPoint(-10, 10); }
-	Point(int x1 , int y1) : x(x1), y(y1) {}
+public:
+	Point(int x1, int y1) : x(x1), y(y1) {}
+	Point() { RandomPoint(-10, 10); }	
 	void CinPoint(int i = 0) {
 		std::cout << "Введите x и y для точки " << i << " >> ";
 		Point point;
@@ -20,7 +22,7 @@ class Point {
 		return sqrt(pow((x - p.x), 2) + pow((y - p.y), 2));
 	}
 	/*Длина  до центра*/
-	double ToCenter() {	
+	double ToCenter() const {	
 		return sqrt(pow((x - 0), 2) + pow((y - 0), 2));
 	}
 	/*Вернуть строку с инфо о точке*/
@@ -29,4 +31,23 @@ class Point {
 			std::to_string(y) + "}";
 		return str;
 	}
+	/*Сравнение >*/
+	bool operator>(const Point& b) {
+		if(this->ToCenter() > b.ToCenter())
+			return true;		
+		return false;
+	}
+	/*Сравнение <*/
+	bool operator<(const Point& b) {
+		if (this->ToCenter() < b.ToCenter())
+			return true;
+		return false;
+	}
+
+	friend std::ostream& operator<< (std::ostream& out, const Point& point);
 };
+
+std::ostream& operator<< (std::ostream& out, const Point& point){
+	out << "(" << point.x << ": " << point.y << ")";
+	return out;
+}
