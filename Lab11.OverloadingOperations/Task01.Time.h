@@ -113,4 +113,10 @@ void MainTime() {
     std::cout << t6.StrTime() << std::endl;
     Time t7 = t2 + timeCin;
     std::cout << t7.StrTime() << std::endl;
+
+    /*Операторы сравнения*/
+    if (t2 > timeCin) std::cout << t2.StrTime() <<" < "<< t2.StrTime() << std::endl;
+    else std::cout << t2.StrTime() << " > " << t2.StrTime() << std::endl;
+
+
 }
