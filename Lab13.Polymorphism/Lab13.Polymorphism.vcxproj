@@ -142,8 +142,11 @@
     <ClCompile Include="Lab13.Polymorphism.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioBook.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Lab13.Main.h" />
     <ClInclude Include="MyInclude.h" />
+    <ClInclude Include="Paperbook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
