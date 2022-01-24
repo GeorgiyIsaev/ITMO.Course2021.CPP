@@ -1,5 +1,5 @@
 #pragma once
-
+#include "MyInclude.h"
 /*«адание 2. –еализаци€ сортировки точек в векторе
 –азработайте класс Point с двум€ пол€ми вещественного
 типа Ц x и y и конструктором с параметрами, а также с
@@ -34,5 +34,15 @@ return 0;
 
 
 void MainSortVector() {
-
+	std::vector<Point> v;
+	v.push_back(Point(1, 2));
+	70
+		v.push_back(Point(10, 12));
+	v.push_back(Point(21, 7));
+	v.push_back(Point(4, 8));
+	std::sort(v.begin(), v.end()); // требуетс€ 
+	перегрузка оператора < дл€ // класса Point
+		for (auto& point : v)
+			std::cout << point << '\n'; // требуетс€ 
+	перегрузка оператора << дл€ // класса Point
 }

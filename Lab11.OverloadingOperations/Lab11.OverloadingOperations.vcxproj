@@ -148,6 +148,7 @@
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="StudentGrade.h" />
     <ClInclude Include="Task01.Time.h" />
+    <ClInclude Include="Task02.Point.h" />
     <ClInclude Include="Task02.SortVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
