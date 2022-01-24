@@ -18,6 +18,14 @@ private:
     int minutes = 0;
     int seconds = 0;
     void RecountTime() {
+        while (seconds < 0) {
+            seconds += 60;
+            minutes--;
+        }
+        while (minutes < 0) {
+            minutes += 60;
+            hours--;
+        }
         while (seconds > 59) {
             seconds -= 60;
             minutes++;
@@ -85,6 +93,13 @@ public:
     Time operator-(const Time& b) {
         return Time(this->hours - b.hours, this->minutes - b.minutes, this->seconds - b.seconds);
     }
+    /*Сложение с вещественным числом*/
+    Time operator+(const int b) {
+        return Time(this->hours, this->minutes, this->seconds + b);
+    }
+    Time operator-(const int b) {
+        return Time(this->hours, this->minutes, this->seconds - b);
+    }
     /*Сравнение*/
     bool operator>(const Time& b) {
         if (this->hours > b.hours) return true;
@@ -118,5 +133,9 @@ void MainTime() {
     if (t2 > timeCin) std::cout << t2.StrTime() <<" < "<< t2.StrTime() << std::endl;
     else std::cout << t2.StrTime() << " > " << t2.StrTime() << std::endl;
 
-
+    /*Сложение с вещественным числом*/
+    t6 = t2 - 3333;
+    std::cout << "-3333: "<< t6.StrTime() << std::endl;
+    t7 = t2 + 3333;
+    std::cout << "+3333: " << t7.StrTime() << std::endl;
 }
