@@ -1,6 +1,7 @@
 #pragma once
 #include "MyInclude.h"
 #include "Human.h"
+#include "Teacher.h"
 
 
 void Task01() {
@@ -33,11 +34,18 @@ void Task02() {
 	std::cout << "Средний балл : " << stud->get_average_score() << std::endl;
 }
 
+void Task03() {
+	unsigned int teacher_work_time = 40;
+	teacher* tch = new teacher("Сергеев", "Дмитрий", "Сергеевич", teacher_work_time);
+	std::cout << tch->get_full_name() << std::endl;
+	std::cout << "Количество часов: " << tch->get_work_time() << std::endl;
+}
 void MainLab12() {
 	/*Практическое занятие 12. Реализация наследования*/
 	/*Упражнение 1. Создание иерархии классов*/
 	Task01();
 	/*Упражнение 2. Создание объекта класса student*/
-	Task02()
-
+	Task02();
+	/*Упражнение 3. Работа с классом teacher*/
+	Task03();
 }
