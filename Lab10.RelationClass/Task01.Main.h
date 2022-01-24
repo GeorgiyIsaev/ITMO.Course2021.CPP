@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include "Task01.Dot.h"
+#include "Task01.Triangle.h"
 
 /*Контрольные задания
 Задание 1. Реализация класса Triangle
@@ -21,5 +23,10 @@
 
 
 void MainTaskTriangle() {
+	Dot dotA(2,2);
+	Dot dotB(2, 0);
+	Dot dotC(5, 2);
 
+	Triangle tringle(dotA, dotB, dotC);
+	std::cout << tringle.strLengthSides() << " ";
 }

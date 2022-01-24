@@ -7,7 +7,7 @@
 #include <windows.h>
 #include <tuple> //кортежи
 #include <vector> //вектора
-#include <iomanip>
+#include <iomanip> //ostringstream
 #include <sstream>
 
 int GetValue(std::string text = "Введите число: ") {
