@@ -3,15 +3,15 @@
 #include "Task01.Human.h"
 
 
-class student : public human {
+class Student : public Human {
 public:
-	// Конструктор класса Student
-	student(std::string last_name, std::string name, std::string second_name,
-		std::vector<int> scores) : human(last_name, name, second_name) {
+	// Конструктор класса Student (Ф,И,О, Вектор с оценками)
+	Student(std::string last_name, std::string name, std::string second_name,
+		std::vector<int> scores) : Human(last_name, name, second_name) {
 		this->scores = scores;
 	}
 	// Получение среднего балла студента
-	float get_average_score()
+	float GetAverageScore()
 	{
 		// Общее количество оценок
 		unsigned int count_scores = this->scores.size();

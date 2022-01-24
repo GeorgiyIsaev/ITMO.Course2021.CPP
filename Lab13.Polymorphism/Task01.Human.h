@@ -1,17 +1,17 @@
 #pragma once
 #include "MyInclude.h"
 
-class human {
+class Human {
 public:
 	// Конструктор класса human
-	human(std::string last_name, std::string name, std::string second_name)
+	Human(std::string last_name, std::string name, std::string second_name)
 	{
 		this->last_name = last_name;
 		this->name = name;
 		this->second_name = second_name;
 	}
 	// Получение ФИО человека
-	std::string get_full_name()
+	std::string GetFullName()
 	{
 		std::ostringstream full_name;
 		full_name << this->last_name << " "

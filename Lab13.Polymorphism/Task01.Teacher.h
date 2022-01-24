@@ -3,16 +3,17 @@
 #include "MyInclude.h"
 #include "Task01.Human.h"
 
-class teacher : public human {
+class Teacher : public Human {
 	// Конструктор класса teacher
 public:
-	teacher(
+	// Конструктор класса Student (Ф,И,О, учебные часы)
+	Teacher(
 		std::string last_name,
 		std::string name,
 		std::string second_name,
 		// Количество учебных часов за семестр у преподавателя
 		unsigned int work_time
-	) : human(
+	) : Human(
 		last_name,
 		name,
 		second_name
@@ -20,7 +21,7 @@ public:
 		this->work_time = work_time;
 	}
 	// Получение количества учебных часов
-	unsigned int get_work_time()
+	unsigned int GetWorkTime()
 	{
 		return this->work_time;
 	}
