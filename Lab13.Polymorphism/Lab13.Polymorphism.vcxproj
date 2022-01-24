@@ -147,6 +147,10 @@
     <ClInclude Include="Lab13.Main.h" />
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="Paperbook.h" />
+    <ClInclude Include="Task01.Human.h" />
+    <ClInclude Include="Task01.Polymorphism.h" />
+    <ClInclude Include="Task01.Student.h" />
+    <ClInclude Include="Task01.Teacher.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

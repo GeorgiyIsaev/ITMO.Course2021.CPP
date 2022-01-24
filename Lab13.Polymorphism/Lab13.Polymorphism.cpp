@@ -1,5 +1,6 @@
 ﻿#include "MyInclude.h"
 #include "Lab13.Main.h"
+#include "Task01.Polymorphism.h"
 
 int main()
 {
@@ -7,5 +8,9 @@ int main()
 	SetConsoleCP(1251);
 	/*Практическое занятие 13. Применение полиморфизма*/
 	MainLab13();
+
+	/*Контрольные задания*/
+	/*Задание 1. Полиморфизм в системе классов учебного центра*/
+	MainPolymorphism();
 }
 
