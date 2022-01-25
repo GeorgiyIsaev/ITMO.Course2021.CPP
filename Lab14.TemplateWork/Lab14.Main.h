@@ -1,5 +1,6 @@
 #pragma once
 #include "MyInclude.h"
+#include "Array.h"
 
 /*Упражнение 1. Создание шаблонной функции сортировки массива*/
 void sortingNT(int arr[], int size) {
@@ -106,6 +107,24 @@ void Task03() {
 
 }
 
+
+/*Упражнение 4. Использование шаблонного класса массива*/
+
+void Task04() {
+	/*Упражнение 4. Использование шаблонного класса массива*/
+	Array<int, long> numbers(100);
+	Array<float, float> values(200);
+	int i;
+	for (i = 0; i < 50; i++) numbers.add_value(i);
+	numbers.show_array();
+	std::cout << "Sum = " << numbers.sum() << std::endl;
+	std::cout << "Average = " << numbers.average_value() << std::endl;
+	for (i = 0; i < 100; i++) values.add_value(i * 100);
+	values.show_array();
+	std::cout << "Sum = " << values.sum() << std::endl;
+	std::cout << "Average = " << values.average_value() << std::endl;
+}
+
 void MainLab14() {
 	/*Практическое занятие 14. Использование шаблонных функций и классов*/
 	/*Упражнение 1. Создание шаблонной функции сортировки массива*/
@@ -118,5 +137,8 @@ void MainLab14() {
 	/*Упражнение 3. Использование шаблонной функции для работы
 	с кортежем любого размера*/
 	Task03();
+
+	/*Упражнение 4. Использование шаблонного класса массива*/
+	Task04();
 }
 
