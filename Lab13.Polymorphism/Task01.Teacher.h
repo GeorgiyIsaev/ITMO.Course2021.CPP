@@ -28,7 +28,7 @@ public:
 	virtual std::string GetInfo() {
 		std::ostringstream workTime;
 		workTime << std::fixed << std::setprecision(1) << GetWorkTime();
-		return "[" + last_name + " " + name + " " + second_name + "] —редний бал:" + workTime.str();
+		return "”„»“≈Ћ№: [" + last_name + " " + name + " " + second_name + "] ”чебных часов:" + workTime.str();
 	}
 private:
 	// ”чебные часы
