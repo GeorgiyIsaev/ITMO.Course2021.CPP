@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab14.TemplateWork", "Lab14
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab15.LibSTL", "Lab15.LibSTL\Lab15.LibSTL.vcxproj", "{39931001-676C-4626-9626-26740BCA774A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab15.LabSTL.Task01", "Lab15.LabSTL.Task01\Lab15.LabSTL.Task01.vcxproj", "{813BE92C-93BA-4105-A78D-18BC5D328565}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{39931001-676C-4626-9626-26740BCA774A}.Release|x64.Build.0 = Release|x64
 		{39931001-676C-4626-9626-26740BCA774A}.Release|x86.ActiveCfg = Release|Win32
 		{39931001-676C-4626-9626-26740BCA774A}.Release|x86.Build.0 = Release|Win32
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Debug|x64.ActiveCfg = Debug|x64
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Debug|x64.Build.0 = Debug|x64
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Debug|x86.ActiveCfg = Debug|Win32
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Debug|x86.Build.0 = Debug|Win32
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Release|x64.ActiveCfg = Release|x64
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Release|x64.Build.0 = Release|x64
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Release|x86.ActiveCfg = Release|Win32
+		{813BE92C-93BA-4105-A78D-18BC5D328565}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
