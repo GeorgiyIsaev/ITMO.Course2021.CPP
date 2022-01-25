@@ -1,5 +1,6 @@
 ﻿#include "MyInclude.h"
 #include "Lab14.Main.h"
+#include "Task01.MainTemplateArray.h"
 
 int main()
 {
@@ -10,6 +11,6 @@ int main()
 
 	/*Контрольные задания.
 	/*Задание 1. Шаблонная функция обработки массива*/
-
+	MainTemplateArray();
 }
 
