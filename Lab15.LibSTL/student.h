@@ -1,7 +1,7 @@
 #pragma once /* Защита от двойного подключения заголовочного файла */
 #include "IdCard.h"
 #include <string>
-
+#include <iostream>
 
 
 class Student
@@ -9,8 +9,7 @@ class Student
     public:
 		// Конструктор класса Student
         Student(std::string, std::string, IdCard*);
-		Student();
-
+        Student();
         // Установка имени студента
         void set_name(std::string);
         // Получение имени студента
@@ -43,9 +42,9 @@ class Student
         // Средний балл
         double average_score;
         // Имя
-        string name;
+        std::string name;
         // Фамилия
-        string last_name;
+        std::string last_name;
 		// Карточка
 		IdCard *iCard;
 		

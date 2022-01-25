@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
 #include "student.h"
-#include "Group.h"
-
 
 // Конструктор Student
 Student::Student(std::string name, std::string last_name, IdCard *id)
@@ -12,8 +8,14 @@ Student::Student(std::string name, std::string last_name, IdCard *id)
 	Student::setIdCard(id);
 	Student::set_average_score(0);
 }
+Student::Student()
+{
+    Student::set_name("");
+    Student::set_last_name("");
+    Student::setIdCard(new IdCard());
+    Student::set_average_score(0);
+}
 
-Student::Student(){}
 // Установка имени студента
 void Student::set_name(std::string student_name)
 {

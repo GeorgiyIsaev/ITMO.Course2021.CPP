@@ -7,9 +7,9 @@
 class Group
 {
 private:
-	string name;
-	list <Student> masSt;
-	list <Student>::iterator iter;
+	std::string name;
+	std::list <Student> masSt;
+	std::list <Student>::iterator iter;
 
 public:
 	int getSize();
@@ -27,5 +27,5 @@ public:
 	Group();
 
 	void setName(std::string newName);
-	string getName();
+	std::string getName();
 };
