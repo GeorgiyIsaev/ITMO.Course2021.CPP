@@ -12,7 +12,7 @@
         number = 0;
 		category = "Не установлена";
 	 }
-	IdCard::IdCard(int n, string cat)
+	IdCard::IdCard(int n, std::string cat)
 	 {
         number = n;
 		category = cat;
@@ -29,12 +29,12 @@
     }
 
 
-	void IdCard::setCategory(string cat)
+	void IdCard::setCategory(std::string cat)
 	{
 		category = cat;
 	}
 
-	string IdCard::getCategory()
+	std::string IdCard::getCategory()
 	{
 		return category;
 	}

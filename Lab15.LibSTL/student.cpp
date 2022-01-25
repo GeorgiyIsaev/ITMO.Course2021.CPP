@@ -2,10 +2,10 @@
 #include <string>
 #include "student.h"
 #include "Group.h"
-using namespace std;
+
 
 //  онструктор Student
-Student::Student(string name, string last_name, IdCard *id)
+Student::Student(std::string name, std::string last_name, IdCard *id)
 {
     Student::set_name(name);
     Student::set_last_name(last_name);
@@ -70,5 +70,24 @@ double Student::get_average_score()
 
  void Student::display() const // вывод всех данных о студенте
  {
-	 cout << last_name << " " << name << "\t" << average_score << "\t" << iCard->getNumber()<< "\t" << iCard->getCategory() << endl;
+     std::cout << last_name << " " << name << "\t" << average_score << "\t" << iCard->getNumber()<< "\t" << iCard->getCategory() << std::endl;
 }
+
+ bool operator== (const Student& p1, const Student& p2)
+ {
+     return (p1.name == p2.name && p1.last_name == p2.last_name) ? true : false;
+ }
+ bool operator< (const Student& p1, const Student& p2)
+ {
+     if (p1.last_name == p2.last_name)
+         return (p1.name < p2.name) ? true : false;
+     return (p1.last_name < p2.last_name) ? true : false;
+ }
+ bool operator!= (Student & p1, Student & p2)
+ {
+     return !(p1 == p2);
+ }
+ bool operator> (Student& p1, Student& p2)
+ {
+     return !(p1 < p2) && !(p2 == p2);
+ }

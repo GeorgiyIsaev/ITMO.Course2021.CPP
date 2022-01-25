@@ -14,22 +14,16 @@ private:
 	int index;
 };
 
-template<class T, class T1> T Array<T, T1>::average_value()
-{
-	T1 sum = 0;
-	for (int i = 0; i < index; i++) sum += data[i];
-	return (sum / index);
-}
 template<class T, class T1> Array<T, T1>::Array(int size)
 {
 	data = new T[size];
 	if (data == NULL)
 	{
-		cerr << "Error memory ---- exit program" << endl;
+		std::cerr << "Error memory ---- exit program" << std::endl;
 		exit(1);
 	}
-	array::size = size;
-	array::index = 0;
+	Array::size = size;
+	Array::index = 0;
 }
 template<class T, class T1> T1 Array<T, T1>::sum()
 {
@@ -45,8 +39,8 @@ template<class T, class T1> T Array<T, T1>::average_value()
 }
 template<class T, class T1> void Array<T, T1>::show_array()
 {
-	for (int i = 0; i < index; i++) cout << data[i] << ' ';
-	cout << endl;
+	for (int i = 0; i < index; i++)  std::cout << data[i] << ' ';
+	std::cout << std::endl;
 }
 template<class T, class T1> int Array<T, T1>::add_value(T value)
 {

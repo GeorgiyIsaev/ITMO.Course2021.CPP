@@ -3,23 +3,22 @@
 #include <string>
 
 
-using namespace std;
 
 class Student
 {
     public:
 		// Конструктор класса Student
-        Student(string, string, IdCard*);
+        Student(std::string, std::string, IdCard*);
 		Student();
 
         // Установка имени студента
-        void set_name(string);
+        void set_name(std::string);
         // Получение имени студента
-        string get_name();
+        std::string get_name();
         // Установка фамилии студента
-        void set_last_name(string);
+        void set_last_name(std::string);
         // Получение фамилии студента
-        string get_last_name();
+        std::string get_last_name();
         // Установка промежуточных оценок
         void set_scores(int []);
         // Установка среднего балла
@@ -32,7 +31,10 @@ class Student
 		void setIdCard(IdCard *c);
 		IdCard getIdCard();
 
-	
+        friend bool operator< (const Student&, const Student&);
+        friend bool operator> (const Student&, const Student&);
+        friend bool operator== (const Student&, const Student&);
+        friend bool operator!= (const Student&, const Student&);
 
 
     private:
