@@ -1,9 +1,8 @@
 #pragma once /* Защита от двойного подключения заголовочного файла */
 #include <string>
-#include "Student.h"
 #include <list>
 #include <algorithm>
-
+#include "Student.h"
 class Group
 {
 private:

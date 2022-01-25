@@ -1,6 +1,6 @@
-﻿#include "MyInclude.h"
+﻿
 #include "Lab15.Main.h"
-
+#include <windows.h>
 int main()
 {
 	SetConsoleOutputCP(1251);

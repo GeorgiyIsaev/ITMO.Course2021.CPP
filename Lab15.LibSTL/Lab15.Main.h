@@ -1,5 +1,5 @@
 #pragma once
-#include "MyInclude.h"
+
 #include "student.h"
 #include "IdCard.h"
 #include "Group.h"

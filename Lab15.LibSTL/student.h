@@ -1,8 +1,7 @@
 #pragma once /* Защита от двойного подключения заголовочного файла */
-#include "IdCard.h"
 #include <string>
 #include <iostream>
-
+#include "IdCard.h"
 
 class Student
 {
