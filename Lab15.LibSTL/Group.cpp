@@ -44,6 +44,10 @@ Student Group::findStudent(std::string searchName, std::string searchLastName)
 	return(*iter);
 }
 
+void Group::GroupSort()
+{
+}
+
 
 
 

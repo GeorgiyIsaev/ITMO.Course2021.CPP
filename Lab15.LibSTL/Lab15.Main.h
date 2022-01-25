@@ -5,32 +5,9 @@
 #include "Group.h"
 
 void MainLab15() {
-
-    std::string name;
-    std::string last_name;
     IdCard* idc = new IdCard(123456, "Базовый");
     IdCard* idc2 = new IdCard(654321, "Базовый");
-    //int id;
-    //string category;
-
-    // Ввод имени с клавиатуры
-    std::cout << "Name: ";
-    getline(std::cin, name);
-
-    // Ввод фамилии
-    std::cout << "Last name: ";
-    getline(std::cin, last_name);
-
-    //cout << "Category: ";
-    //getline(cin, category);
-    //idc->setCategory(category);
-
-    //cout << "IdCard :";
-    //cin >> id;
-    //idc->setNumber(id);
-
-        // Передача параметров конструктору
-    Student* student02 = new Student(name, last_name, idc);
+   
 
     Student student03("Петр", "Петров", idc2);
     Student student04("Семен", "Смирнов", idc);
@@ -49,41 +26,4 @@ void MainLab15() {
     gr1957.delStudent(gr1957.findStudent("Семен", "Смирнов"));
 
 
-
-    // Оценки
-    int scores[5];
-    // Сумма всех оценок
-    int sum = 0;
-
-    // Ввод промежуточных оценок 
-    for (int i = 0; i < 5; ++i) {
-        std::cout << "Score " << i + 1 << ": ";
-        std::cin >> scores[i];
-        // суммирование
-        sum += scores[i];
-    }
-
-    // Сохраняем промежуточные оценки в объект класса Student
-    student02->set_scores(scores);
-
-    // Считаем средний балл
-    double average_score = sum / 5.0;
-    // Сохраняем средний балл в объект класса Student
-    student02->set_average_score(average_score);
-
-    //IdCard* card = new IdCard(123);
-    //student02->setIdCard(*card);
-
-    // Выводим данные по студенту
-    std::cout << "Average ball for " << student02->get_name() << " "
-        << student02->get_last_name() << " is "
-        << student02->get_average_score() << std::endl;
-
-
-    std::cout << "IdCard: " << student02->getIdCard().getNumber() << std::endl;
-    std::cout << "Category: " << student02->getIdCard().getCategory() << std::endl;
-
-
-    // Удаление объекта student из памяти
-    delete student02;
 }
