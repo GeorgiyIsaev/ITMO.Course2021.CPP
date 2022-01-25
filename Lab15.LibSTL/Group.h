@@ -13,10 +13,19 @@ private:
 
 public:
 	int getSize();
+	void addStudent(Student newStudent);
+	void delStudent(Student oldStudent);
+	/*Поиск студента*/
+	Student findStudent(std::string, std::string);
+	/*Сортировка*/
+	void GroupSort();
+	/*Инофрмация о содержиом*/
+	void GroupOut();
 
-	Group(string name);
+	
+	Group(std::string name);
 	Group();
 
-	void setName(string newName);
+	void setName(std::string newName);
 	string getName();
 };
