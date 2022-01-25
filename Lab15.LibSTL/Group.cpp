@@ -46,6 +46,7 @@ Student Group::findStudent(std::string searchName, std::string searchLastName)
 
 void Group::GroupSort()
 {
+	masSt.sort();
 }
 
 
