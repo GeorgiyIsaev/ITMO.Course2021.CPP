@@ -42,7 +42,7 @@ void Task02() {
     Student* student04 = new Student("Семен", "Смирнов", idc);
     Student* student05 = new Student("Саша", "Коен", idc2);
     Student* student06 = new Student("Дмитрий", "Ионов", idc);
-    GroupMS gr1957("1957");
+    GroupMS gr1957("1957"); //Группа с мультисетом
     gr1957.addStudent(student03);
     gr1957.addStudent(student04);
     gr1957.addStudent(student05);
