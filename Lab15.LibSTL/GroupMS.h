@@ -3,28 +3,27 @@
 #include <list>
 #include <algorithm>
 #include "Student.h"
+#include <set>
 
-class Group
+class GroupMS
 {
 private:
 	std::string name;
-	std::list <Student> masSt;
-	std::list <Student>::iterator iter;
+	std::multiset<Student*, compareStudent> masSt;
+	std::multiset<Student*, compareStudent>::iterator iter;
 
 public:
 	int getSize();
-	void addStudent(Student newStudent);
-	void delStudent(Student oldStudent);
+	void addStudent(Student* newStudent);
+	void delStudent(Student* oldStudent);
 	/*Поиск студента*/
-	Student findStudent(std::string, std::string);
-	/*Сортировка*/
-	void GroupSort();
+	Student* findStudent(std::string, std::string);
 	/*Инофрмация о содержиом*/
 	void GroupOut();
 
 	
-	Group(std::string name);
-	Group();
+	GroupMS(std::string name);
+	GroupMS();
 
 	void setName(std::string newName);
 	std::string getName();
