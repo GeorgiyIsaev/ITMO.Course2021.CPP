@@ -25,6 +25,11 @@ public:
 		average_score = (float)sum_scores / (float)count_scores;
 		return average_score;
 	}
+	virtual std::string GetInfo() {
+		std::ostringstream average;
+		average << std::fixed << std::setprecision(1) << GetAverageScore();	
+		return "["+last_name + " " + name + " " + second_name + "] Средний бал:" + average.str();
+	}
 private:
 	// Оценки студента
 	std::vector<int> scores;

@@ -19,7 +19,8 @@ public:
 			<< this->second_name;
 		return full_name.str();
 	}
-private:
+	virtual std::string GetInfo() { return ""; }
+protected:
 	std::string name; // имя
 	std::string last_name; // фамилия
 	std::string second_name; // отчество

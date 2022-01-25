@@ -25,6 +25,11 @@ public:
 	{
 		return this->work_time;
 	}
+	virtual std::string GetInfo() {
+		std::ostringstream workTime;
+		workTime << std::fixed << std::setprecision(1) << GetWorkTime();
+		return "[" + last_name + " " + name + " " + second_name + "] Средний бал:" + workTime.str();
+	}
 private:
 	// Учебные часы
 	unsigned int work_time;
