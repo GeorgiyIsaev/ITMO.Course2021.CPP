@@ -40,14 +40,46 @@ struct StudentGrade {
 			std::cout << pair.first << "  : ";
 			for (const auto& mark : pair.second)
 			{
-				std::cout << mark << " ";	
+				std::cout << mark << " ";
 			}
 			std::cout << std::endl;
 		}
 	}
+	void PrintName(std::string name) {
+		std::vector<char> marks = sstudentMarks[name];
+		std::cout << name << "  : ";
+		for (const auto& mark : marks)
+		{
+			std::cout << mark << " ";
+		}
+		std::cout << std::endl;
+	}
 };
+
 
 int main()
 {
-	std::map<std::string, std::string> st;
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	/*Задание 1. Организация хранения данных в контейнере*/
+	StudentGrade studentGrades;
+	studentGrades.AddStudentMark("Петр", 'C');
+	studentGrades.AddStudentMark("Лекс", 'A');
+	studentGrades.AddStudentMark("Петр", 'B');
+	studentGrades.AddStudentMark("Лекс", 'A');
+	studentGrades.AddStudentMark("Марк", 'A');
+	studentGrades.AddStudentMark("Макс", 'C');
+	studentGrades.AddStudentMark("Марк", 'A');
+	studentGrades.AddStudentMark("Петр", 'A');
+	studentGrades.AddStudentMark("Макс", 'B');
+	studentGrades.AddStudentMark("Лекс", 'A');
+	studentGrades.AddStudentMark("Лекс", 'A');
+	studentGrades.AddStudentMark("Петр", 'C');
+	studentGrades.AddStudentMark("Марк", 'A');
+
+
+	studentGrades.Print();
+	std::cout <<"Поиск по имени: ";
+	studentGrades.PrintName("Петр");
+	return 0;
 }
