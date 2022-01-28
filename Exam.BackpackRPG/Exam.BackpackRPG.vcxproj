@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Exam.BackpackRPG.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyInclude.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
