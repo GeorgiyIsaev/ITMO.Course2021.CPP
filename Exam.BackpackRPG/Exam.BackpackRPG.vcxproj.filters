@@ -29,5 +29,8 @@
     <ClInclude Include="Def.ItemDef.h">
       <Filter>Файлы заголовков\Defs</Filter>
     </ClInclude>
+    <ClInclude Include="Def.WeaponDef.h">
+      <Filter>Файлы заголовков\Defs</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

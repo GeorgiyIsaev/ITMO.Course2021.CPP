@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Def.ItemDef.h" />
+    <ClInclude Include="Def.WeaponDef.h" />
     <ClInclude Include="MyInclude.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
