@@ -142,7 +142,9 @@
     <ClCompile Include="Exam.BackpackRPG.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Def.EatDef.h" />
     <ClInclude Include="Def.ItemDef.h" />
+    <ClInclude Include="Def.RunaDef.h" />
     <ClInclude Include="Def.WeaponDef.h" />
     <ClInclude Include="MyInclude.h" />
   </ItemGroup>
