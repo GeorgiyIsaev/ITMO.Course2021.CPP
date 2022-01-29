@@ -13,4 +13,7 @@ public:
 		//строка с информацией о предмете
 		return GetName() + "\t\t Можно скушать ";
 	}
+	std::string StrToFile() {
+		return "EatDef;;;" + GetName() + ";;;" + GetDescription() + ";;;" + std::to_string(recharge);
+	}
 };

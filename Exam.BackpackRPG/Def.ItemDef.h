@@ -13,5 +13,6 @@ public:
 	ItemDef(std::string name, std::string description) : name(name), description(description){}
 	virtual std::string ItemUse() = 0; //вызвается при использвании предмета
 	virtual std::string GetInfo() = 0; //строка с информацией о предмете
+	virtual std::string StrToFile() = 0; //вызвается при использвании предмета
 
 };

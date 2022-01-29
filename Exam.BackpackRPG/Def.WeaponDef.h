@@ -15,4 +15,7 @@ public:
 		//строка с информацией о предмете
 		return GetName() + "\t\t Урон: " + std::to_string(damage);
 	}
+	std::string StrToFile() {
+		return "WeaponDef;;;" + GetName() + ";;;" + GetDescription() +";;;"+ std::to_string(damage);
+	}
 };
