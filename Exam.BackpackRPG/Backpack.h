@@ -7,10 +7,10 @@ class Backpack {
 private:
 	std::vector<ItemDef*> itemDefs;
 public:
-	void addItem(ItemDef* itemDef) {
+	void AddItem(ItemDef* itemDef) {
 		itemDefs.push_back(itemDef);
 	}
-	void fileSave(const std::string & text, std::string nameFile = "TestFile.txt") {	
+	void FileSave(const std::string & text, std::string nameFile = "TestFile.txt") {	
 			std::ofstream out(nameFile);
 			if (!out)
 			{
@@ -23,6 +23,11 @@ public:
 					out << itemDef->StrToFile() << "\n";
 			}
 			out.close();		
+	}
+	void PrintBackpack() {
+		for (ItemDef* itemDef : itemDefs)
+			std::cout << itemDef->GetInfo() << "\n";
+		std::cout << "\n";
 	}
 
 
