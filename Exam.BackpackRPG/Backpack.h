@@ -19,7 +19,8 @@ public:
 			}
 			if (out.is_open())
 			{
-				out << text;
+				for(ItemDef* itemDef:  itemDefs )
+					out << itemDef->StrToFile() << "\n";
 			}
 			out.close();		
 	}
