@@ -16,6 +16,9 @@
     <Filter Include="Файлы заголовков\Defs">
       <UniqueIdentifier>{161414b8-86ea-44c3-ab80-77784bc854ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\DefOff">
+      <UniqueIdentifier>{954b520b-a9d6-451a-bddd-9817b54e01ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exam.BackpackRPG.cpp">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="Backpack.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponOff.h">
+      <Filter>Файлы заголовков\DefOff</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -148,6 +148,7 @@
     <ClInclude Include="Def.RunaDef.h" />
     <ClInclude Include="Def.WeaponDef.h" />
     <ClInclude Include="MyInclude.h" />
+    <ClInclude Include="WeaponOff.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
