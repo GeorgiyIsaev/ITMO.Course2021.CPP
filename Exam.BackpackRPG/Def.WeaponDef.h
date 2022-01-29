@@ -7,7 +7,7 @@ protected:
 	int damage;
 public:
 	int GetDamage() { return damage; }
-	WeaponDef(std::string name, std::string description) : ItemDef(name, description) {}
+	WeaponDef(std::string name, std::string description, int damage) : ItemDef(name, description), damage(damage) {}
 	std::string ItemUse() {
 		return "Вы взмахнули " + GetName();
 	}
