@@ -5,6 +5,7 @@
 #include "Def.RunaDef.h"
 #include "WeaponOff.h"
 #include "RunaDefOff.h"
+#include "EatDefOff.h"
 
 class ItemDefOff {
 public:
@@ -51,9 +52,9 @@ public:
 		case 2:
 			return RunaDefOff::createRuna(val);		
 		case 3:
-			return new WeaponDef("Медный нож", "Нож из меди", 5);
+			return EatDefOff::createRuna(val);		
 		case 4:
-
+			return new WeaponDef("Медный нож", "Нож из меди", 5);
 		default:
 			return WeaponOff::createWeapon(0);
 		}

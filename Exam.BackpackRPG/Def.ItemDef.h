@@ -14,5 +14,12 @@ public:
 	virtual std::string ItemUse() = 0; //вызвается при использвании предмета
 	virtual std::string GetInfo() = 0; //строка с информацией о предмете
 	virtual std::string StrToFile() = 0; //вызвается при использвании предмета
-
+	std::string GetNameMenu() {
+		int count = name.length();
+		std::string temp = name;
+		for (int i = count; i < 25; i++)
+		{
+			temp += " ";
+		}
+		return temp; }
 };

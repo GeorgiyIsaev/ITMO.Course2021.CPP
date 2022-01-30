@@ -53,5 +53,8 @@
     <ClInclude Include="RunaDefOff.h">
       <Filter>Файлы заголовков\DefOff</Filter>
     </ClInclude>
+    <ClInclude Include="EatDefOff.h">
+      <Filter>Файлы заголовков\DefOff</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

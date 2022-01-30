@@ -11,9 +11,9 @@ public:
 	}
 	virtual std::string GetInfo() {
 		//строка с информацией о предмете
-		return GetName() + "\t\t Можно скушать ";
+		return GetNameMenu() + " Можно скушать ";
 	}
 	std::string StrToFile() {
-		return "EatDef;;;" + GetName() + ";;;" + GetDescription() + ";;;" + std::to_string(recharge);
+		return "EatDef;;;" + GetName() + ";;;" + GetDescription();
 	}
 };

@@ -13,7 +13,7 @@ public:
 	}
 	virtual std::string GetInfo() {
 		//строка с информацией о предмете
-		return GetName() + "\t\t Перезарядка через: " + std::to_string(recharge);
+		return GetNameMenu() + " Перезарядка через: " + std::to_string(recharge);
 	}
 	std::string StrToFile() {
 		return "RunaDef;;;" + GetName() + ";;;" + GetDescription() + ";;;" + std::to_string(recharge);
