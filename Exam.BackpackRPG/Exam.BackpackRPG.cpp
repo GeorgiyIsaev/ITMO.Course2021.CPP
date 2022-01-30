@@ -19,8 +19,14 @@ int main()
 	backpack.AddItem(WeaponOff::createWeapon(1));
 	backpack.AddItem(WeaponOff::createWeapon(3));
 	backpack.AddItem(WeaponOff::createWeapon(4));
-	backpack.AddItem(WeaponOff::createWeapon("Нож;;;нож;;;99"));
 	backpack.PrintBackpack();
 
+	backpack.AddItem(WeaponOff::createWeapon("WeaponDef;;;Нож;;;нож;;;99"));
+	backpack.PrintBackpack();
+
+	backpack.FileSave();
+
+	//backpack.ReadFile();
+	//backpack.PrintBackpack();
 }
 
