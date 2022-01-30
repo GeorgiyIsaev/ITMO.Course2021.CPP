@@ -36,6 +36,7 @@ int main()
 	backpack.AddItem(ItemDefOff::createRandomItem());
 	backpack.AddItem(ItemDefOff::createRandomItem());
 	backpack.PrintBackpack();
+	backpack.FileSave();
 
 
 }
