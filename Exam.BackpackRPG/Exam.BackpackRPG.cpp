@@ -38,6 +38,11 @@ int main()
 	backpack.PrintBackpack();
 	backpack.FileSave();
 
+	for (int i = 0; i < 5; i++) {
+		int val = GetRandomInt(0, backpack.Size());
+		backpack.UseItem(val);
+	}
+
 
 }
 

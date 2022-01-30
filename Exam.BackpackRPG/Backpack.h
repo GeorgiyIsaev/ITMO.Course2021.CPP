@@ -11,6 +11,7 @@ public:
 	void AddItem(ItemDef* itemDef) {
 		itemDefs.push_back(itemDef);
 	}
+	int Size() {return itemDefs.size();	}
 	void FileSave(std::string nameFile = "TestFile.txt") {	
 			std::ofstream out(nameFile);
 			if (!out)
@@ -45,7 +46,11 @@ public:
 			std::cout << itemDef->GetInfo() << "\n";
 		std::cout << "\n";
 	}
-
+	void UseItem(int i) {
+		if (i > 0 && i < Size()) {
+			std::cout << itemDefs[i]->ItemUse() << "\n";
+		}
+	}
 
 };
 
