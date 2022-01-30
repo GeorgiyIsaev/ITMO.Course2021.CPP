@@ -3,21 +3,32 @@
 #include "Def.WeaponDef.h"
 
 
-static class WeaponOff {
+/*static*/ class WeaponOff {
+public:
 	static ItemDef* createWeapon(std::string name, std::string description, int damage) {
 		return new WeaponDef(name, description, damage);
 	}
 	static ItemDef* createWeapon(std::string str) {
-		//Для чтения из файла
+
 		std::vector<std::string> tokens;
-		std::string delims = ";;;";
-		std::string::size_type pos;
-		while ((pos = str.find_first_of(delims)) != std::string::npos) {
-			str.erase(pos, 1);			
-		}			
-		std::stringstream ss(str);
-		std::move(std::istream_iterator<std::string>(ss), std::istream_iterator<std::string>(), std::back_inserter(tokens));	
-		
+		char bufs[] = "one, two, three", * p;
+
+		char buf[200] = "";
+		rsize_t strmax = sizeof str;
+		char* next_token = NULL;
+		strcpy_s(bufs, str.c_str());
+		std::cout << bufs << " \n";
+		for (p = strtok_s(buf, ";;;", &next_token); p != NULL; p = strtok_s(NULL, ";;;", &next_token)) {
+			std::cout << p << " \n";
+			tokens.push_back(p);
+		}
+
+	
+		std::cout << bufs << " \n";
+		for (auto itemDef : tokens)
+			std::cout << itemDef<< " \n";
+		std::cout << "\n";
+
 		//return new WeaponDef(tokens[0], tokens[1], stoi(tokens[2]));
 		return new WeaponDef(tokens[0], tokens[1], 3);
 	}

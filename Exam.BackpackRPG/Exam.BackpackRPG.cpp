@@ -1,4 +1,6 @@
 ﻿#include "MyInclude.h"
+#include "Backpack.h"
+#include "WeaponOff.h"
 
 /*ИТОГОВОЕ задание*/
 /*Требования*/
@@ -9,6 +11,16 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	srand(time(0));
+
+	Backpack backpack;
+	backpack.AddItem(WeaponOff::createWeapon(1));
+	backpack.AddItem(WeaponOff::createWeapon(3));
+	backpack.AddItem(WeaponOff::createWeapon(4));
+	backpack.AddItem(WeaponOff::createWeapon("Нож;;;нож;;;99"));
+	backpack.PrintBackpack();
+
 }
 
