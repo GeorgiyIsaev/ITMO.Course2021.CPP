@@ -1,7 +1,7 @@
 #pragma once
 #include "MyInclude.h"
 #include "Def.ItemDef.h"
-
+#include "WeaponOff.h"
 
 class Backpack {
 private:
@@ -10,7 +10,7 @@ public:
 	void AddItem(ItemDef* itemDef) {
 		itemDefs.push_back(itemDef);
 	}
-	void FileSave(const std::string & text, std::string nameFile = "TestFile.txt") {	
+	void FileSave(std::string nameFile = "TestFile.txt") {	
 			std::ofstream out(nameFile);
 			if (!out)
 			{
@@ -24,6 +24,20 @@ public:
 			}
 			out.close();		
 	}
+	void ReadFile(std::string nameFile = "TestFile.txt") {
+		std::string temp;
+
+		std::ifstream in(nameFile); // окрываем файл для чтения
+		if (in.is_open())
+		{
+			while (getline(in, temp))
+			{			
+				itemDefs.push_back(WeaponOff::createWeapon(temp));
+			}
+		}
+		in.close();     // закрываем файл
+	}
+
 	void PrintBackpack() {
 		for (ItemDef* itemDef : itemDefs)
 			std::cout << itemDef->GetInfo() << "\n";

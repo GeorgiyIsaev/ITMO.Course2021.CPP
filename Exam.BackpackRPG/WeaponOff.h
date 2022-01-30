@@ -30,7 +30,7 @@ public:
 		std::cout << "\n";
 
 		//return new WeaponDef(tokens[0], tokens[1], stoi(tokens[2]));
-		return new WeaponDef(tokens[0], tokens[1], 3);
+		return new WeaponDef(tokens[1], tokens[2], 3);
 	}
 	static ItemDef* createWeapon(int id) {
 		switch (id) {
