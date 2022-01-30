@@ -42,7 +42,7 @@ public:
 
 		return new WeaponDef(tokens[1], tokens[2], value);
 	}
-	static ItemDef* createRandomItem(int id) {
+	static ItemDef* createRandomItem() {
 		int classItem = GetRandomInt(1, 4);
 		int val = GetRandomInt(1, 6);
 		switch (classItem) {
