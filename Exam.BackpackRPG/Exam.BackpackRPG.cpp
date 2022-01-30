@@ -1,6 +1,7 @@
 ﻿#include "MyInclude.h"
 #include "Backpack.h"
 #include "WeaponOff.h"
+#include "ItemDefOf.h"
 
 /*ИТОГОВОЕ задание*/
 /*Требования*/
@@ -21,12 +22,12 @@ int main()
 	backpack.AddItem(WeaponOff::createWeapon(4));
 	backpack.PrintBackpack();
 
-	backpack.AddItem(WeaponOff::createWeapon("WeaponDef;;;Нож;;;нож;;;99"));
+	backpack.AddItem(ItemDefOff::createItem("WeaponDef;;;Нож;;;нож;;;99"));
 	backpack.PrintBackpack();
 
 	backpack.FileSave();
 
-	//backpack.ReadFile();
-	//backpack.PrintBackpack();
+	backpack.ReadFile();
+	backpack.PrintBackpack();
 }
 

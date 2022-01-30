@@ -2,6 +2,7 @@
 #include "MyInclude.h"
 #include "Def.ItemDef.h"
 #include "WeaponOff.h"
+#include "ItemDefOf.h"
 
 class Backpack {
 private:
@@ -32,13 +33,14 @@ public:
 		{
 			while (getline(in, temp))
 			{			
-				itemDefs.push_back(WeaponOff::createWeapon(temp));
+				itemDefs.push_back(ItemDefOff::createItem(temp));			
 			}
 		}
 		in.close();     // закрываем файл
 	}
 
 	void PrintBackpack() {
+		std::cout<<"РЮГЗАК:" << "\n";
 		for (ItemDef* itemDef : itemDefs)
 			std::cout << itemDef->GetInfo() << "\n";
 		std::cout << "\n";

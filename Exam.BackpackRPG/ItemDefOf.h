@@ -4,6 +4,7 @@
 #include "Def.WeaponDef.h"
 #include "Def.RunaDef.h"
 #include "WeaponOff.h"
+#include "RunaDefOff.h"
 
 class ItemDefOff {
 public:
@@ -18,8 +19,7 @@ public:
 		rsize_t strmax = sizeof str;
 		char* next_token = NULL;
 		strcpy_s(buf, str.c_str());
-		for (p = strtok_s(buf, ";;;", &next_token); p != NULL; p = strtok_s(NULL, ";;;", &next_token)) {
-			std::cout << p << " \n";
+		for (p = strtok_s(buf, ";;;", &next_token); p != NULL; p = strtok_s(NULL, ";;;", &next_token)) {		
 			tokens.push_back(p);
 		}
 
@@ -36,23 +36,22 @@ public:
 			return new WeaponDef(tokens[1], tokens[2], value);
 		}
 		else if (tokens[0] == "RunaDef") {
-			return new RunaDef(tokens[1], tokens[2]);
+			return new RunaDef(tokens[1], tokens[2], value);
 		}
 
 
 		return new WeaponDef(tokens[1], tokens[2], value);
 	}
 	static ItemDef* createRandomItem(int id) {
-		int classItem = GetRandomInt(1, 2);
-
+		int classItem = GetRandomInt(1, 4);
+		int val = GetRandomInt(1, 6);
 		switch (classItem) {
-		case 1:
-			int val = GetRandomInt(1, 6);
+		case 1:	
 			return WeaponOff::createWeapon(val);		
 		case 2:
-			return new WeaponDef("Медный нож", "Нож из меди", 5);
+			return RunaDefOff::createRuna(val);		
 		case 3:
-			return new WeaponDef("Железный нож", "Нож из железа", 7);
+			return new WeaponDef("Медный нож", "Нож из меди", 5);
 		case 4:
 
 		default:
