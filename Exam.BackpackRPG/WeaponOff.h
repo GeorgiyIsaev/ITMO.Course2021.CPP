@@ -3,7 +3,7 @@
 #include "Def.WeaponDef.h"
 
 
-/*static*/ class WeaponOff {
+class WeaponOff {
 public:
 	static ItemDef* createWeapon(std::string name, std::string description, int damage) {
 		return new WeaponDef(name, description, damage);

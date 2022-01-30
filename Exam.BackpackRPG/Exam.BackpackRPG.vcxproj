@@ -147,6 +147,7 @@
     <ClInclude Include="Def.ItemDef.h" />
     <ClInclude Include="Def.RunaDef.h" />
     <ClInclude Include="Def.WeaponDef.h" />
+    <ClInclude Include="ItemDefOf.h" />
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="WeaponOff.h" />
   </ItemGroup>

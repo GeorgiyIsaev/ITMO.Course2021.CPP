@@ -47,5 +47,8 @@
     <ClInclude Include="WeaponOff.h">
       <Filter>Файлы заголовков\DefOff</Filter>
     </ClInclude>
+    <ClInclude Include="ItemDefOf.h">
+      <Filter>Файлы заголовков\DefOff</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
