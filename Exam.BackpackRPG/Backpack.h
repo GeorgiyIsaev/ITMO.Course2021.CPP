@@ -2,7 +2,7 @@
 #include "MyInclude.h"
 #include "Def.ItemDef.h"
 #include "WeaponOff.h"
-#include "ItemDefOf.h"
+#include "ItemDefOff.h"
 
 class Backpack {
 private:
