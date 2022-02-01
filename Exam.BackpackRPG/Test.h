@@ -42,5 +42,9 @@ void TestStatus() {
 	backpack->AddItem(EatDefOff::createEat(2));
 	backpack->AddItem(EatDefOff::createEat(3));
 	backpack->PrintBackpack();
+
+	backpack->UseItem(1);
+	backpack->PrintBackpack();
+
 	std::cout << plaer->StatusBar() << std::endl;
 }

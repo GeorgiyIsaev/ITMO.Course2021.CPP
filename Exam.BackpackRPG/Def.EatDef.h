@@ -9,11 +9,12 @@ protected:
 public:
 	EatDef(std::string name, std::string description, int heatHeal, int count) : ItemDef(name, description), heatHeal(heatHeal),count(count){}
 	std::string ItemUse(PlaerStatus* plaerStatus) {
+		plaerStatus->SetHeat(heatHeal);
 		return GetName() + " вкусно пахнет";
 	}
 	virtual std::string GetInfo() {
 		//строка с информацией о предмете
-		return GetNameMenu() + " Можно скушать ";
+		return GetNameMenu() + " ХП " + std::to_string(heatHeal);
 	}
 
 	std::string StrToFile() {
