@@ -3,6 +3,7 @@
 #include "Backpack.h"
 #include "WeaponOff.h"
 #include "ItemDefOff.h"
+#include "PlaerStatus.h"
 
 void TestBackpack() {
 	Backpack backpack;
@@ -31,4 +32,9 @@ void TestBackpack() {
 		backpack.UseItem(val);
 	}
 
+}
+
+void TestStatus() {
+	PlaerStatus* plaer = new PlaerStatus();
+	std::cout << plaer->StatusBar() <<std::endl;
 }

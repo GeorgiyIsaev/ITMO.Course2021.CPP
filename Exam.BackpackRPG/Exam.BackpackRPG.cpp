@@ -18,6 +18,6 @@ int main()
 	srand(time(0));
 
 	//TestBackpack(); //тест сумки
-
+	TestStatus();
 }
 
