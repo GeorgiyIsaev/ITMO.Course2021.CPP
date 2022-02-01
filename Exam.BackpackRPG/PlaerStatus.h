@@ -22,5 +22,9 @@ public:
 			"; STR= " + std::to_string(strength) + 
 			" [" + std::to_string(dotX) + ":"+ std::to_string(dotY) + "]";
 	}
+	void SetHeat(int changeHeat) {
+		heat += changeHeat;
+		if (heat < 0) heat = -1;
+	}
 };
 
