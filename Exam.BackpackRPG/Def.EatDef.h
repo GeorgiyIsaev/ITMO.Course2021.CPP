@@ -6,7 +6,7 @@ class EatDef : public ItemDef {
 protected:	
 public:
 	EatDef(std::string name, std::string description) : ItemDef(name, description) {}
-	std::string ItemUse() {
+	std::string ItemUse(PlaerStatus& plaerStatus) {
 		return GetName() + " вкусно пахнет";
 	}
 	virtual std::string GetInfo() {
