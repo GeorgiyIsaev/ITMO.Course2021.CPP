@@ -8,7 +8,7 @@ protected:
 	int count;
 public:
 	EatDef(std::string name, std::string description, int heatHeal, int count) : ItemDef(name, description), heatHeal(heatHeal),count(count){}
-	std::string ItemUse(const PlaerStatus& plaerStatus) {
+	std::string ItemUse(/*PlaerStatus* plaerStatus*/) {
 		return GetName() + " вкусно пахнет";
 	}
 	virtual std::string GetInfo() {
