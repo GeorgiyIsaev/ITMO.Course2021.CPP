@@ -59,10 +59,10 @@
     <ClInclude Include="ItemDefOff.h">
       <Filter>Файлы заголовков\DefOff</Filter>
     </ClInclude>
-    <ClInclude Include="PlaerStatus.h">
-      <Filter>Файлы заголовков\Plaer</Filter>
-    </ClInclude>
     <ClInclude Include="Test.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaerStatus.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

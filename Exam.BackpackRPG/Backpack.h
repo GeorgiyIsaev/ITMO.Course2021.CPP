@@ -3,15 +3,15 @@
 #include "Def.ItemDef.h"
 #include "WeaponOff.h"
 #include "ItemDefOff.h"
+#include "PlaerStatus.h"
 
 class Backpack {
 private:
 	std::vector<ItemDef*> itemDefs;
-	PlaerStatus* plaer;// = new PlaerStatus();
-
+	PlaerStatus* plaer;
 public:
+	Backpack() {plaer = new PlaerStatus	();	}
 	Backpack(PlaerStatus* plaer) :plaer(plaer){
-
 	}
 
 	void AddItem(ItemDef* itemDef) {

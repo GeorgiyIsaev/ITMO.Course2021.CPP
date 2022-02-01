@@ -1,5 +1,6 @@
 #pragma once
 #include "MyInclude.h"
+#include "PlaerStatus.h"
 
 /*Абстрактный класс для хранения информациии о всех предметах*/
 class ItemDef {
@@ -11,7 +12,7 @@ public:
 	std::string GetDescription() { return description; }
 
 	ItemDef(std::string name, std::string description) : name(name), description(description){}
-	virtual std::string ItemUse(/*PlaerStatus* plaerStatus*/) = 0; //вызвается при использвании предмета
+	virtual std::string ItemUse(PlaerStatus* plaerStatus) = 0; //вызвается при использвании предмета
 	virtual std::string GetInfo() = 0; //строка с информацией о предмете
 	virtual std::string StrToFile() = 0; //вызвается при использвании предмета
 	std::string GetNameMenu() {
