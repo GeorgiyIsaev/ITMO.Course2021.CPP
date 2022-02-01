@@ -150,6 +150,7 @@
     <ClInclude Include="EatDefOff.h" />
     <ClInclude Include="ItemDefOff.h" />
     <ClInclude Include="MyInclude.h" />
+    <ClInclude Include="PlaerStatus.h" />
     <ClInclude Include="RunaDefOff.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="WeaponOff.h" />
