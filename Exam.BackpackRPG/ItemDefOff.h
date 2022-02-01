@@ -50,7 +50,7 @@ public:
 		case 2:
 			return RunaDefOff::createRuna(val);		
 		case 3:
-			return EatDefOff::createRuna(val);		
+			return EatDefOff::createEat(val);		
 		case 4:
 			return new WeaponDef("Медный нож", "Нож из меди", 5);
 		default:

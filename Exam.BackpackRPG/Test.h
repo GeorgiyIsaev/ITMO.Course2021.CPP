@@ -27,14 +27,18 @@ void TestBackpack() {
 	backpack.PrintBackpack();
 	backpack.FileSave();
 
-	for (int i = 0; i < 5; i++) {
-		int val = GetRandomInt(0, backpack.Size());
-		backpack.UseItem(val);
-	}
+	//for (int i = 0; i < 5; i++) {
+	//	int val = GetRandomInt(0, backpack.Size());
+	//	backpack.UseItem(val);
+	//}
 
 }
 
 void TestStatus() {
 	PlaerStatus* plaer = new PlaerStatus();
 	std::cout << plaer->StatusBar() <<std::endl;
+
+	Backpack backpack;
+	backpack.AddItem(EatDefOff::createEat(2));
+	backpack.AddItem(EatDefOff::createEat(3));
 }
