@@ -151,6 +151,7 @@
     <ClInclude Include="ItemDefOff.h" />
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="RunaDefOff.h" />
+    <ClInclude Include="Test.h" />
     <ClInclude Include="WeaponOff.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
