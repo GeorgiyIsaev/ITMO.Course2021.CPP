@@ -10,8 +10,8 @@ private:
 	PlaerStatus* plaer;// = new PlaerStatus();
 
 public:
-	Backpack(PlaerStatus* plaer) {
-		this->plaer = plaer;
+	Backpack(PlaerStatus* plaer) :plaer(plaer){
+
 	}
 
 	void AddItem(ItemDef* itemDef) {
