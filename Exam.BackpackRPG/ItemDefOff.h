@@ -26,22 +26,20 @@ public:
 
 		int value;
 		try {
-			value = stoi(tokens[3]);
+			if (tokens[0] == "WeaponDef") {
+				return new WeaponDef(tokens[1], tokens[2], stoi(tokens[3]);
+			}
+			else if (tokens[0] == "RunaDef") {
+				return new RunaDef(tokens[1], tokens[2], stoi(tokens[3]);
+			}
+			else if (tokens[0] == "EatDef") {
+				return new EatDef(tokens[1], tokens[2], stoi(tokens[3]), stoi(tokens[4]));
+			}
 		}
 		catch (std::invalid_argument e) {
 			std::cout << "Caught Invalid Argument Exception\n";
-			value = 1;
+			return new WeaponDef("Сломаная палка", "Неудачно прочитаный предмет", 0);
 		}
-
-		if (tokens[0] == "WeaponDef") {
-			return new WeaponDef(tokens[1], tokens[2], value);
-		}
-		else if (tokens[0] == "RunaDef") {
-			return new RunaDef(tokens[1], tokens[2], value);
-		}
-
-
-		return new WeaponDef(tokens[1], tokens[2], value);
 	}
 	static ItemDef* createRandomItem() {
 		int classItem = GetRandomInt(1, 4);

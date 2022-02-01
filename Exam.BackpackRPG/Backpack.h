@@ -46,9 +46,9 @@ public:
 			std::cout << itemDef->GetInfo() << "\n";
 		std::cout << "\n";
 	}
-	void UseItem(int i) {
+	void UseItem(int i, PlaerStatus& plaerStatus) {
 		if (i > 0 && i < Size()) {
-			std::cout << itemDefs[i]->ItemUse() << "\n";
+			std::cout << itemDefs[i]->ItemUse(plaerStatus) << "\n";
 		}
 	}
 
