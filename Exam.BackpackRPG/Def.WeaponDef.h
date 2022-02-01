@@ -8,7 +8,7 @@ protected:
 public:
 	int GetDamage() { return damage; }
 	WeaponDef(std::string name, std::string description, int damage) : ItemDef(name, description), damage(damage) {}
-	std::string ItemUse(PlaerStatus& plaerStatus) {
+	std::string ItemUse(const PlaerStatus* plaerStatus) {
 		return "Вы держите в руках " + GetName();
 	}
 	virtual std::string GetInfo() {

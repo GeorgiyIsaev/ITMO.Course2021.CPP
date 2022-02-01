@@ -27,10 +27,10 @@ public:
 		int value;
 		try {
 			if (tokens[0] == "WeaponDef") {
-				return new WeaponDef(tokens[1], tokens[2], stoi(tokens[3]);
+				return new WeaponDef(tokens[1], tokens[2], stoi(tokens[3]));
 			}
 			else if (tokens[0] == "RunaDef") {
-				return new RunaDef(tokens[1], tokens[2], stoi(tokens[3]);
+				return new RunaDef(tokens[1], tokens[2], stoi(tokens[3]));
 			}
 			else if (tokens[0] == "EatDef") {
 				return new EatDef(tokens[1], tokens[2], stoi(tokens[3]), stoi(tokens[4]));

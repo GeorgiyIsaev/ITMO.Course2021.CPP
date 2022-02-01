@@ -38,7 +38,9 @@ void TestStatus() {
 	PlaerStatus* plaer = new PlaerStatus();
 	std::cout << plaer->StatusBar() <<std::endl;
 
-	Backpack backpack;
+	Backpack backpack(plaer);
 	backpack.AddItem(EatDefOff::createEat(2));
 	backpack.AddItem(EatDefOff::createEat(3));
+	backpack.PrintBackpack();
+	std::cout << plaer->StatusBar() << std::endl;
 }

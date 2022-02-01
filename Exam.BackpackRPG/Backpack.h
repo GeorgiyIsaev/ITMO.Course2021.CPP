@@ -7,7 +7,13 @@
 class Backpack {
 private:
 	std::vector<ItemDef*> itemDefs;
+	PlaerStatus* plaer;// = new PlaerStatus();
+
 public:
+	Backpack(PlaerStatus* plaer) {
+		this->plaer = plaer;
+	}
+
 	void AddItem(ItemDef* itemDef) {
 		itemDefs.push_back(itemDef);
 	}
@@ -46,9 +52,9 @@ public:
 			std::cout << itemDef->GetInfo() << "\n";
 		std::cout << "\n";
 	}
-	void UseItem(int index, PlaerStatus& plaerStatus) {
+	void UseItem(int index) {
 		if (index > 0 && index < Size()) {
-			std::cout << itemDefs[index]->ItemUse(plaerStatus) << "\n";
+			std::cout << itemDefs[index]->ItemUse(plaer) << "\n";
 		}
 	}
 

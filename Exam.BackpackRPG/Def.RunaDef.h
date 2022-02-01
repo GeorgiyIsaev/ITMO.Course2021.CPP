@@ -8,7 +8,7 @@ protected:
 public:
 	int GetRecharge() { return recharge; }
 	RunaDef(std::string name, std::string description, int recharge) : ItemDef(name, description), recharge(recharge) {}
-	std::string ItemUse(PlaerStatus& plaerStatus) {
+	std::string ItemUse(const PlaerStatus& plaerStatus) {
 		return "Руна " + GetName() + "выпустила магический свет!";
 	}
 	virtual std::string GetInfo() {
