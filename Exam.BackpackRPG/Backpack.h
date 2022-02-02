@@ -1,6 +1,6 @@
 #pragma once
 #include "IncludeFile.h"
-"
+
 
 class Backpack {
 private:

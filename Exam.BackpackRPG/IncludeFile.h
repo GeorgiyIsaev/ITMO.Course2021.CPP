@@ -19,6 +19,7 @@
 #include "Backpack.h"
 #include "PlaerStatus.h"
 #include "Game.h"
+#include "ControlWASD.h"
 
 
 #include "Test.h"

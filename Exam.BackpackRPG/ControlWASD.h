@@ -6,10 +6,10 @@ int controlWASD() {
 	char ch;
 	while (1)
 	{
-		ch = getch();
+		ch = _getch();
 	
 		int code = static_cast<int>(ch);
-		//cout << "COD int " << code << endl;
+		std::cout << "COD int " << code << std::endl;
 		switch (code) {
 		case 27: //(esc - 27)
 			return 0; 
