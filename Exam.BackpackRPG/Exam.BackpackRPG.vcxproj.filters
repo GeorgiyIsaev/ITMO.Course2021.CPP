@@ -22,6 +22,9 @@
     <Filter Include="Файлы заголовков\Plaer">
       <UniqueIdentifier>{cba776e2-3d70-4499-b81e-d7429eb46078}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Control">
+      <UniqueIdentifier>{e5c9bfc7-a70b-49a6-b6f1-48ae747057d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exam.BackpackRPG.cpp">
@@ -64,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="Test.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlWASD.h">
+      <Filter>Файлы заголовков\Control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

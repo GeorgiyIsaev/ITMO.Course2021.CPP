@@ -9,6 +9,10 @@
 #include <vector> //вектора
 #include <iomanip> //ostringstream
 #include <sstream>
+#include <conio.h> // подключаем getch
+
+
+
 
 int GetValue(std::string text = "Введите число: ") {
 	std::cout << text;

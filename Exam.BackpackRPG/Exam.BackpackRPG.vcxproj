@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Backpack.h" />
+    <ClInclude Include="ControlWASD.h" />
     <ClInclude Include="Def.EatDef.h" />
     <ClInclude Include="Def.ItemDef.h" />
     <ClInclude Include="Def.RunaDef.h" />
