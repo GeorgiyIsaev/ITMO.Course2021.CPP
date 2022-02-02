@@ -1,9 +1,6 @@
 #pragma once
-#include "MyInclude.h"
-#include "Def.ItemDef.h"
-#include "WeaponOff.h"
-#include "ItemDefOff.h"
-#include "PlaerStatus.h"
+#include "IncludeFile.h"
+"
 
 class Backpack {
 private:

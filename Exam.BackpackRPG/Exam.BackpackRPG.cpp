@@ -1,8 +1,5 @@
-﻿#include "MyInclude.h"
-#include "Backpack.h"
-#include "WeaponOff.h"
-#include "ItemDefOff.h"
-#include "Test.h"
+﻿#include "IncludeFile.h"
+
 
 /*ИТОГОВОЕ задание*/
 /*Требования*/

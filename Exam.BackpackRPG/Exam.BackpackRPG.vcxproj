@@ -149,6 +149,8 @@
     <ClInclude Include="Def.RunaDef.h" />
     <ClInclude Include="Def.WeaponDef.h" />
     <ClInclude Include="EatDefOff.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="IncludeFile.h" />
     <ClInclude Include="ItemDefOff.h" />
     <ClInclude Include="MyInclude.h" />
     <ClInclude Include="PlaerStatus.h" />
